@@ -9,14 +9,14 @@ const AboutPage: React.FC = () => {
           <div className="reveal active">
             <span className="text-emerald-600 font-black text-sm uppercase tracking-widest mb-4 block">Sobre Nós</span>
             <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 tracking-tighter">
-              Sua Vidraçaria de <br/><span className="text-emerald-600">Confiança.</span>
+              Engenharia e <br/><span className="text-emerald-600">Precisão em Vidros.</span>
             </h1>
             <div className="space-y-6 text-lg text-slate-600 leading-relaxed font-medium">
               <p>
-                A <strong>{CLIENT_CONFIG.name}</strong> trabalha com foco em qualidade e agilidade. Somos especialistas em vidros temperados e laminados, atendendo projetos de todos os tamanhos.
+                A <strong>{CLIENT_CONFIG.name}</strong> é referência em soluções sob medida. Atendemos desde pequenos reparos residenciais até grandes fachadas comerciais.
               </p>
               <p>
-                Trabalhamos apenas com materiais certificados e ferragens de alta durabilidade, garantindo que seu projeto seja seguro e bonito por muito tempo.
+                Nosso diferencial é o atendimento direto via WhatsApp, onde você fala com quem entende do assunto, garantindo rapidez no orçamento e segurança na instalação.
               </p>
               <div className="mt-10">
                 <a 
@@ -32,8 +32,8 @@ const AboutPage: React.FC = () => {
           <div className="reveal active">
             <div className="relative rounded-[3rem] overflow-hidden shadow-2xl bg-slate-100 aspect-[4/5]">
               <img 
-                src="/images/sobre-nos.jpg" 
-                alt="Nossa Equipe" 
+                src="/images/Vidros temperados.jpg" 
+                alt="Nossa Fábrica" 
                 className="w-full h-full object-cover"
               />
             </div>

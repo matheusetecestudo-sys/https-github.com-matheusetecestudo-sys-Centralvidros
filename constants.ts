@@ -1,6 +1,6 @@
 export const CLIENT_CONFIG = {
   name: "Cristal Glass",
-  city: "Sua Região",
+  city: "São Paulo e Região",
   neighborhoods: "Atendimento rápido em toda a cidade",
   whatsapp: "5511999999999",
   phoneDisplay: "(11) 99999-9999",
@@ -19,7 +19,7 @@ export const getServiceWhatsAppLink = (serviceName: string) => {
 
 export const CTA_TEXT = "Peça seu orçamento no WhatsApp";
 
-// Imagens Locais conforme solicitado
+// Imagens específicas solicitadas
 export const USER_BOX_IMAGE = "/images/Box do banheiro.jpg";
 export const USER_DOOR_IMAGE = "/images/Caixa para abrir.jpg";
 
@@ -31,7 +31,7 @@ export interface Service {
   tag?: string;
 }
 
-// 4 Serviços em Destaque (Cards Grandes)
+// 4 Serviços mais comuns (Destaque Principal)
 export const FEATURED_SERVICES: Service[] = [
   {
     id: 'box-de-vidro',
@@ -44,7 +44,7 @@ export const FEATURED_SERVICES: Service[] = [
     id: 'janelas-de-vidro',
     title: "Janelas de vidro",
     description: "Janelas de correr e basculantes sob medida para maior ventilação e claridade.",
-    imageUrl: "/images/janelas.jpg",
+    imageUrl: "/images/Janelas de vidro.jpg",
     tag: "Pronta Entrega"
   },
   {
@@ -58,49 +58,55 @@ export const FEATURED_SERVICES: Service[] = [
     id: 'troca-de-vidro-quebrado',
     title: "Troca de vidro quebrado",
     description: "Atendimento urgente para substituição de vidros em janelas, portas e sacadas.",
-    imageUrl: "/images/troca-vidro.jpg",
+    imageUrl: "/images/Manutenção e troca de vidro quebrado.jpg",
     tag: "Urgente"
   }
 ];
 
-// Lista Completa dos 10 Serviços
+// Lista Completa de todos os serviços (10 itens)
 export const ALL_SERVICES: Service[] = [
-  ...FEATURED_SERVICES,
+  ...FEATURED_SERVICES.slice(0, 3), // Box, Janelas, Portas
   {
     id: 'espelhos-sob-medida',
     title: "Espelhos sob medida",
-    description: "Espelhos de cristal prata com acabamento bisotê ou lapidado para qualquer ambiente.",
-    imageUrl: "/images/espelhos.jpg"
+    description: "Espelhos de cristal com acabamento bisotê ou lapidado para banheiros e salas.",
+    imageUrl: "/images/Espelhos sob medida.jpg"
   },
   {
     id: 'envidracamento-sacadas',
     title: "Envidraçamento de sacadas",
     description: "Sistema retrátil panorâmico para proteção contra chuva, vento e barulho.",
-    imageUrl: "/images/sacadas.jpg"
+    imageUrl: "/images/Envidraçamento de sacadas.jpg"
   },
   {
     id: 'vidros-temperados',
     title: "Vidros temperados",
-    description: "Vidros de segurança para divisórias, tampos de mesa e prateleiras.",
-    imageUrl: "/images/temperados.jpg"
+    description: "Vidros de alta resistência para divisórias, tampos de mesa e prateleiras.",
+    imageUrl: "/images/Vidros temperados.jpg"
   },
   {
     id: 'vidros-laminados',
     title: "Vidros laminados",
-    description: "Vidros de alta segurança com película interna, ideais para coberturas.",
-    imageUrl: "/images/laminados.jpg"
+    description: "Vidros de segurança compostos por duas lâminas, ideais para coberturas.",
+    imageUrl: "/images/Vidros laminados.jpg"
   },
   {
     id: 'fachadas-de-vidro',
     title: "Fachadas de vidro",
     description: "Projetos comerciais de alto padrão com sistema glazing ou pele de vidro.",
-    imageUrl: "/images/fachadas.jpg"
+    imageUrl: "/images/Fachadas de vidro.jpg"
   },
   {
     id: 'guarda-corpo-vidro',
     title: "Guarda-corpo de vidro",
-    description: "Segurança para escadas e varandas com fixação técnica em aço inox.",
-    imageUrl: "/images/guarda-corpo.jpg"
+    description: "Segurança para escadas e varandas com fixação técnica e design moderno.",
+    imageUrl: "/images/Guarda-corpo de vidro.jpg"
+  },
+  {
+    id: 'manutencao-vidro',
+    title: "Manutenção e troca de vidro quebrado",
+    description: "Substituição rápida de vidros avariados com garantia de vedação.",
+    imageUrl: "/images/Manutenção e troca de vidro quebrado.jpg"
   }
 ];
 

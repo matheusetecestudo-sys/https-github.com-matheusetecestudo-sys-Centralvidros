@@ -32,7 +32,7 @@ const AboutPage: React.FC = () => {
           <div className="reveal active">
             <div className="relative rounded-[3rem] overflow-hidden shadow-2xl bg-slate-100 aspect-[4/5]">
               <img 
-                src="/images/Fachadas de vidro.jpg" 
+                src="/images/Fachadas de vidro.png" 
                 alt="Projetos Cristal Glass" 
                 className="w-full h-full object-cover"
               />

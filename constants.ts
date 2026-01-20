@@ -27,97 +27,97 @@ export interface Service {
   tag?: string;
 }
 
-// Catálogo Completo com 15 Serviços (Um para cada imagem)
+// Catálogo Completo com 15 Serviços (Um para cada imagem .png)
 export const ALL_SERVICES: Service[] = [
   {
     id: 'box-de-vidro',
     title: "Box de vidro",
     description: "Vidros temperados para banheiros com diversas opções de acabamento.",
-    imageUrl: "/images/Box de vidro.jpg"
+    imageUrl: "/images/Box de vidro.png"
   },
   {
     id: 'janelas-de-vidro',
     title: "Janelas de vidro",
     description: "Instalação de janelas em vidro temperado ou comum.",
-    imageUrl: "/images/Janelas de vidro.jpg"
+    imageUrl: "/images/Janelas de vidro.png"
   },
   {
     id: 'portas-de-vidro',
     title: "Portas de vidro",
     description: "Soluções elegantes para entradas e divisórias de ambientes.",
-    imageUrl: "/images/Portas de vidro.jpg"
+    imageUrl: "/images/Portas de vidro.png"
   },
   {
     id: 'espelhos-sob-medida',
     title: "Espelhos sob medida",
     description: "Espelhos lapidados e bisotados para salas e banheiros.",
-    imageUrl: "/images/Espelhos sob medida.jpg"
+    imageUrl: "/images/Espelhos sob medida.png"
   },
   {
     id: 'envidracamento-sacadas',
     title: "Envidraçamento de sacadas",
     description: "Fechamento de varandas com sistema de abertura total.",
-    imageUrl: "/images/Envidraçamento de sacadas.jpg"
+    imageUrl: "/images/Envidraçamento de sacadas.png"
   },
   {
     id: 'vidros-temperados',
     title: "Vidros temperados",
     description: "Vidros de alta resistência para diversas aplicações.",
-    imageUrl: "/images/Vidros temperados.jpg"
+    imageUrl: "/images/Vidros temperados.png"
   },
   {
     id: 'vidros-laminados',
     title: "Vidros laminados",
     description: "Vidros de segurança para coberturas e áreas de risco.",
-    imageUrl: "/images/Vidros laminados.jpg"
+    imageUrl: "/images/Vidros laminados.png"
   },
   {
     id: 'fachadas-de-vidro',
     title: "Fachadas de vidro",
     description: "Projetos de fachadas comerciais e residenciais (Pele de vidro).",
-    imageUrl: "/images/Fachadas de vidro.jpg"
+    imageUrl: "/images/Fachadas de vidro.png"
   },
   {
     id: 'guarda-corpo-vidro',
     title: "Guarda-corpo de vidro",
     description: "Segurança e design para escadas e sacadas.",
-    imageUrl: "/images/Guarda-corpo de vidro.jpg"
+    imageUrl: "/images/Guarda-corpo de vidro.png"
   },
   {
     id: 'manutencao-vidro',
     title: "Manutenção e troca de vidro quebrado",
     description: "Troca rápida e segura de vidros avariados.",
-    imageUrl: "/images/Manutenção e troca de vidro quebrado.jpg"
+    imageUrl: "/images/Manutenção e troca de vidro quebrado.png"
   },
   {
     id: 'tampos-de-mesa',
     title: "Tampos de mesa",
     description: "Vidros sob medida para mesas de jantar e escritórios.",
-    imageUrl: "/images/Tampos de mesa.jpg"
+    imageUrl: "/images/Tampos de mesa.png"
   },
   {
     id: 'prateleiras-de-vidro',
     title: "Prateleiras de vidro",
     description: "Soluções práticas e elegantes para organização.",
-    imageUrl: "/images/Prateleiras de vidro.jpg"
+    imageUrl: "/images/Prateleiras de vidro.png"
   },
   {
     id: 'divisorias-de-vidro',
     title: "Divisórias de vidro",
     description: "Divisão de ambientes corporativos e residenciais.",
-    imageUrl: "/images/Divisórias de vidro.jpg"
+    imageUrl: "/images/Divisórias de vidro.png"
   },
   {
     id: 'coberturas-de-vidro',
     title: "Coberturas de vidro",
     description: "Proteção contra chuva com entrada de luz natural.",
-    imageUrl: "/images/Coberturas de vidro.jpg"
+    imageUrl: "/images/Coberturas de vidro.png"
   },
   {
     id: 'muro-de-vidro',
     title: "Muro de vidro",
     description: "Segurança com visibilidade total para sua fachada.",
-    imageUrl: "/images/Muro de vidro.jpg"
+    imageUrl: "/images/Muro de vidro.png"
   }
 ];
 
@@ -134,7 +134,7 @@ export const TESTIMONIALS = [
     name: "João Silva",
     text: "Orçamento rápido pelo WhatsApp e instalação no prazo. O box ficou ótimo.",
     role: "Cliente",
-    avatar: "/images/avatar-1.jpg",
+    avatar: "/images/avatar-1.png",
     stars: 5,
     date: "há 2 dias"
   },
@@ -142,7 +142,7 @@ export const TESTIMONIALS = [
     name: "Maria Oliveira",
     text: "Precisei trocar o vidro da janela urgente e eles resolveram no mesmo dia.",
     role: "Cliente",
-    avatar: "/images/avatar-2.jpg",
+    avatar: "/images/avatar-2.png",
     stars: 5,
     date: "há 1 semana"
   }

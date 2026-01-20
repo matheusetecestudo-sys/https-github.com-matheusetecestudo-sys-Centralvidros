@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
           <div className="reveal active hidden lg:block">
             <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl border-8 border-slate-50">
               <img
-                src="/images/Box de vidro.jpg"
+                src="/images/Box de vidro.png"
                 alt="Box de Banheiro Cristal Glass"
                 className="w-full h-full object-cover"
               />

@@ -19,7 +19,7 @@ export const getServiceWhatsAppLink = (serviceName: string) => {
 
 export const CTA_TEXT = "Peça seu orçamento no WhatsApp";
 
-// Imagens específicas solicitadas com nomes de arquivos exatos
+// Imagens específicas solicitadas com nomes de arquivos manuais
 export const USER_BOX_IMAGE = "/images/Box do banheiro.jpg";
 export const USER_DOOR_IMAGE = "/images/Caixa para abrir.jpg";
 
@@ -31,7 +31,7 @@ export interface Service {
   tag?: string;
 }
 
-// 4 Serviços Principais (Destaque)
+// 4 Serviços Principais (Destaque na Home)
 export const FEATURED_SERVICES: Service[] = [
   {
     id: 'box-de-vidro',
@@ -55,15 +55,15 @@ export const FEATURED_SERVICES: Service[] = [
     tag: "Alta Resistência"
   },
   {
-    id: 'troca-de-vidro-quebrado',
-    title: "Troca de vidro quebrado",
+    id: 'manutencao-e-troca-de-vidro-quebrado',
+    title: "Manutenção e troca de vidro quebrado",
     description: "Atendimento urgente para manutenção e substituição de vidros.",
     imageUrl: "/images/Manutenção e troca de vidro quebrado.jpg",
     tag: "Urgente"
   }
 ];
 
-// Catálogo Completo (10 Serviços) - Imagens seguindo o nome do serviço
+// Catálogo Completo (Todos os 10 Serviços seguindo os nomes dos arquivos)
 export const ALL_SERVICES: Service[] = [
   {
     id: 'box-de-vidro',
@@ -120,7 +120,7 @@ export const ALL_SERVICES: Service[] = [
     imageUrl: "/images/Guarda-corpo de vidro.jpg"
   },
   {
-    id: 'manutencao-vidro',
+    id: 'manutencao-e-troca-de-vidro-quebrado',
     title: "Manutenção e troca de vidro quebrado",
     description: "Troca rápida e segura de vidros avariados.",
     imageUrl: "/images/Manutenção e troca de vidro quebrado.jpg"

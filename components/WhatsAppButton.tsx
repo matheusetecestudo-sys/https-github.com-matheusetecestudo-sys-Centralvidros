@@ -1,13 +1,11 @@
-
 import React from 'react';
 import { WHATSAPP_LINK } from '../constants';
 
 const WhatsAppButton: React.FC = () => {
   return (
     <div className="fixed bottom-6 right-6 z-[120] flex flex-col items-end gap-3 pointer-events-none">
-      {/* Card Flutuante - Estilo Idêntico ao Print */}
-      <div className="bg-white px-5 py-3 rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-slate-50 animate-fade-in-up pointer-events-auto mb-1">
-        <p className="text-[9px] font-black text-[#00966d] uppercase tracking-[0.2em] leading-none mb-2">Online agora</p>
+      <div className="bg-white px-5 py-3 rounded-2xl shadow-xl border border-slate-100 animate-fade-in-up pointer-events-auto mb-1">
+        <p className="text-[10px] font-black text-[#00966d] uppercase tracking-widest leading-none mb-1">Técnico Online</p>
         <p className="text-sm font-black text-slate-900 leading-none">Pedir Orçamento</p>
       </div>
 
@@ -15,7 +13,7 @@ const WhatsAppButton: React.FC = () => {
         href={WHATSAPP_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="pointer-events-auto flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:scale-110 transition-all active:scale-95 animate-bounce-slow"
+        className="pointer-events-auto flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-2xl hover:scale-110 transition-all active:scale-95 animate-bounce-slow"
         aria-label="WhatsApp"
       >
         <svg

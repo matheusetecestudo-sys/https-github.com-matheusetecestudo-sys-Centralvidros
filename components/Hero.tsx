@@ -1,5 +1,5 @@
 import React from 'react';
-import { WHATSAPP_LINK, CTA_TEXT, USER_BOX_IMAGE } from '../constants';
+import { WHATSAPP_LINK, CTA_TEXT } from '../constants';
 
 const Hero: React.FC = () => {
   return (
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
           <div className="reveal active hidden lg:block">
             <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl border-8 border-slate-50">
               <img
-                src={USER_BOX_IMAGE}
+                src="/images/Box de vidro.jpg"
                 alt="Box de Banheiro Cristal Glass"
                 className="w-full h-full object-cover"
               />

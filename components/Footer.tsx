@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { WHATSAPP_LINK, CLIENT_CONFIG, ALL_SERVICES, getServiceWhatsAppLink } from '../constants';
 
@@ -9,19 +8,17 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const currentYear = new Date().getFullYear();
   
-  // Dividindo os 15 serviços (8 em uma, 7 na outra)
+  // Dividindo os 15 serviços (8 em uma coluna, 7 na outra)
   const col1 = ALL_SERVICES.slice(0, 8);
   const col2 = ALL_SERVICES.slice(8);
 
   return (
     <footer className="bg-[#020617] text-slate-400 pt-24 pb-8 relative overflow-hidden border-t border-slate-900">
-      {/* Glow de profundidade */}
       <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-emerald-600/5 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
           
-          {/* Coluna 1: Autoridade e Prova Social */}
           <div className="lg:col-span-4 space-y-8">
             <button 
               onClick={() => onNavigate?.('home')}
@@ -54,7 +51,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Coluna 2: Mapa de Soluções (Os 15 Serviços) */}
           <div className="lg:col-span-5 grid grid-cols-2 gap-x-4 md:gap-x-8 gap-y-10">
             <div>
               <h4 className="text-white font-black text-[10px] uppercase tracking-[0.4em] mb-8 border-l-2 border-emerald-500 pl-4">Soluções Principais</h4>
@@ -94,7 +90,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Coluna 3: Chamada Final e Atendimento */}
           <div className="lg:col-span-3">
             <div className="bg-gradient-to-br from-slate-900 to-slate-950 p-8 rounded-[2.5rem] border border-slate-800 shadow-2xl relative group overflow-hidden">
               <h4 className="text-white font-black text-lg leading-tight mb-4">
@@ -124,7 +119,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Assinatura Técnica Final */}
         <div className="pt-10 border-t border-slate-900/50 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
           <div>
             <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-700">

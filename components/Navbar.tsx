@@ -33,32 +33,34 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
   return (
     <>
-      <header className={`fixed top-4 md:top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-[1280px] z-[100] transition-all duration-500 ${scrolled ? 'bg-white/80 backdrop-blur-md py-3 px-6 md:px-10 rounded-2xl shadow-xl' : 'py-6 px-4 bg-transparent'
+      <header className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled ? 'bg-white/90 backdrop-blur-xl py-4 shadow-lg' : 'py-8 bg-transparent'
         }`}>
-        <div className="flex justify-between items-center h-12">
+        <div className="container-precision flex justify-between items-center h-12">
 
-          <button onClick={() => handleNav('home')} className="flex items-center gap-4 group">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-lg transition-all duration-500 ${scrolled ? 'bg-brand-primary' : 'bg-slate-900 group-hover:bg-brand-primary'}`}>
+          <button
+            onClick={() => handleNav('home')}
+            className="flex items-center gap-3 md:gap-4 group focus:outline-none"
+            aria-label="Ir para a página inicial"
+          >
+            <div className={`w-10 h-10 md:w-12 md:h-12 rounded-2xl flex items-center justify-center text-white font-black text-lg transition-all duration-500 shadow-lg ${scrolled ? 'bg-brand-primary' : 'bg-slate-900 group-hover:bg-brand-primary'}`}>
               C
             </div>
             <div className="flex flex-col items-start leading-tight">
-              <span className="text-sm font-black tracking-tighter text-slate-900 uppercase">Cristal Glass</span>
-              <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Vidraçaria Premium</span>
+              <span className="text-sm md:text-base font-black tracking-tighter text-slate-900 uppercase">Cristal Glass</span>
+              <span className="text-[8px] md:text-[9px] font-bold text-slate-400 uppercase tracking-widest">Vidraçaria Técnica</span>
             </div>
           </button>
 
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-8 lg:gap-12">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNav(item.id)}
-                className={`text-[11px] font-bold uppercase tracking-[0.2em] transition-all relative py-2 ${currentPage === item.id ? 'text-brand-accent' : 'text-slate-500 hover:text-brand-accent'
+                className={`text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.3em] transition-all relative py-2 group focus:outline-none ${currentPage === item.id ? 'text-brand-accent' : 'text-slate-500 hover:text-brand-accent'
                   }`}
               >
                 {item.label}
-                {currentPage === item.id && (
-                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-accent rounded-full" />
-                )}
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[3px] bg-brand-accent rounded-full transition-all duration-300 ${currentPage === item.id ? 'w-full' : 'w-0 group-hover:w-1/2'}`} />
               </button>
             ))}
           </nav>
@@ -68,50 +70,62 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden lg:flex items-center justify-center px-6 h-12 bg-brand-whatsapp text-white rounded-xl font-bold text-xs btn-interact shadow-lg shadow-brand-whatsapp/20"
+              className="hidden lg:flex items-center justify-center px-8 h-12 bg-brand-whatsapp text-white rounded-xl font-bold text-[10px] uppercase tracking-widest btn-interact shadow-xl shadow-brand-whatsapp/10 focus:outline-none"
             >
-              Peça seu orçamento no WhatsApp
+              Orçamento Rápido
             </a>
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden w-11 h-11 flex items-center justify-center bg-white rounded-xl border border-slate-100 shadow-sm"
+              className="md:hidden w-12 h-12 flex items-center justify-center bg-white rounded-2xl border border-slate-100 shadow-sm z-[110] relative focus:outline-none touch-manipulation"
+              aria-expanded={isMenuOpen}
+              aria-label="Alternar menu"
             >
               <div className="w-5 flex flex-col gap-1.5">
-                <span className={`h-[2px] bg-brand-accent rounded-full transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
-                <span className={`h-[2px] bg-brand-accent rounded-full transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
-                <span className={`h-[2px] bg-brand-accent rounded-full transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+                <span className={`h-[2px] bg-brand-accent rounded-full transition-all duration-300 transform-gpu ${isMenuOpen ? 'rotate-45 translate-y-[8px]' : ''}`} />
+                <span className={`h-[2px] bg-brand-accent rounded-full transition-all duration-300 ${isMenuOpen ? 'opacity-0 scale-x-0' : ''}`} />
+                <span className={`h-[2px] bg-brand-accent rounded-full transition-all duration-300 transform-gpu ${isMenuOpen ? '-rotate-45 -translate-y-[8px]' : ''}`} />
               </div>
             </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white z-[90] md:hidden transition-all duration-500 ease-in-out ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      {/* Mobile Menu Drawer - Full Screen UX */}
+      <div className={`fixed inset-0 bg-slate-950/20 backdrop-blur-sm z-[95] md:hidden transition-all duration-500 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={() => setIsMenuOpen(false)} />
+
+      <div className={`fixed top-0 right-0 h-screen w-full sm:w-[400px] bg-white z-[100] md:hidden transition-transform duration-500 ease-in-out transform-gpu shadow-2xl ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
-        <div className="h-full flex flex-col justify-center items-center gap-12 px-10">
-          <div className="flex flex-col items-center gap-8">
+        <div className="h-full flex flex-col pt-32 pb-12 px-10">
+          <p className="text-[10px] font-black tracking-[0.4em] text-slate-300 uppercase mb-8">Navegação</p>
+
+          <div className="flex flex-col gap-4">
             {navItems.map((item, idx) => (
               <button
                 key={item.id}
                 onClick={() => handleNav(item.id)}
-                className={`text-4xl font-black tracking-tighter transition-all duration-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                className={`text-4xl font-black tracking-tighter text-left py-4 transition-all duration-500 touch-manipulation focus:outline-none ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'
                   } ${currentPage === item.id ? 'text-brand-accent' : 'text-slate-900'}`}
-                style={{ transitionDelay: `${idx * 100}ms` }}
+                style={{ transitionDelay: `${idx * 75}ms` }}
               >
                 {item.label}
               </button>
             ))}
           </div>
-          <div className={`w-24 h-[1px] bg-slate-100 transition-all duration-1000 ${isMenuOpen ? 'scale-x-100' : 'scale-x-0'}`} />
-          <a
-            href={WHATSAPP_LINK}
-            className={`px-10 h-14 flex items-center bg-brand-whatsapp text-white rounded-2xl font-bold text-sm btn-interact shadow-xl shadow-brand-whatsapp/20 transition-all duration-700 delay-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-              }`}
-          >
-            Peça seu orçamento no WhatsApp
-          </a>
+
+          <div className="mt-auto space-y-8">
+            <div className={`w-full h-[1px] bg-slate-100 transition-all duration-1000 origin-left ${isMenuOpen ? 'scale-x-100' : 'scale-x-0'}`} />
+
+            <div className={`transition-all duration-700 delay-400 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-4">Atendimento Técnico</p>
+              <a
+                href={WHATSAPP_LINK}
+                className="w-full h-16 flex items-center justify-center bg-brand-whatsapp text-white rounded-2xl font-black text-sm uppercase tracking-widest btn-interact shadow-2xl shadow-brand-whatsapp/20"
+              >
+                WhatsApp Oficial
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </>

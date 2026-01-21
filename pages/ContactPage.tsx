@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import WhatsAppButton from '../components/WhatsAppButton';
 import { WHATSAPP_LINK, CLIENT_CONFIG } from '../constants';
 
 const ContactPage: React.FC = () => {
@@ -11,8 +8,6 @@ const ContactPage: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen font-inter">
-      <Navbar currentPage="contato" />
-
       <main className="pt-32 pb-24">
         <header className="py-24 bg-slate-50 border-b border-slate-100 mb-24">
           <div className="container-precision">
@@ -113,9 +108,6 @@ const ContactPage: React.FC = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
-      <WhatsAppButton />
     </div>
   );
 };

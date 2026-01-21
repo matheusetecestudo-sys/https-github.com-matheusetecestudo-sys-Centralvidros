@@ -3,51 +3,41 @@ import { TESTIMONIALS } from '../constants';
 
 const Testimonials: React.FC = () => {
   return (
-    <section id="depoimentos" className="py-32 bg-slate-50 relative overflow-hidden font-inter">
-      <div className="container-precision z-10">
+    <section id="depoimentos" className="py-24 bg-white relative font-inter border-t border-slate-50">
+      <div className="container-precision">
 
-        <div className="mb-24 reveal active items-end grid lg:grid-cols-12 gap-8">
-          <div className="lg:col-span-8">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="w-10 h-[1px] bg-brand-accent"></span>
-              <span className="text-[10px] font-bold text-brand-accent uppercase tracking-widest">Feedback dos Clientes</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight leading-[1]">
-              A Experiência de quem <br />
-              <span className="text-slate-400 font-medium">escolheu a Cristal Glass.</span>
-            </h2>
+        <header className="mb-16 reveal active max-w-2xl">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="w-8 h-[1px] bg-brand-accent"></span>
+            <span className="text-[10px] font-bold text-brand-accent uppercase tracking-widest text-center">Opinião de quem contratou</span>
           </div>
-        </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            Excelência aprovada por <br />
+            <span className="text-slate-400 font-medium italic">nossos clientes.</span>
+          </h2>
+        </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
-          {TESTIMONIALS.map((testimonial, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {TESTIMONIALS.map((t, i) => (
             <div
-              key={index}
-              className="reveal active bg-white p-10 md:p-12 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col border border-slate-100/50"
+              key={i}
+              className="reveal active flex flex-col p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-lg transition-all duration-500"
+              style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="flex items-center gap-6 mb-10">
-                <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-lg bg-slate-100 shrink-0">
-                  <img src={testimonial.avatar} alt={testimonial.name} className="w-full h-full object-cover" loading="lazy" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-bold text-xl text-slate-900 leading-none mb-2">{testimonial.name}</span>
-                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">{testimonial.role}</span>
-                </div>
+              <div className="flex gap-1 text-amber-400 mb-6 scale-90 origin-left">
+                {[...Array(t.stars)].map((_, starI) => (
+                  <svg key={starI} className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                ))}
               </div>
 
-              <p className="text-lg text-slate-500 font-medium leading-relaxed italic mb-10 flex-grow">
-                "{testimonial.text}"
+              <p className="text-slate-600 font-medium leading-relaxed mb-8 flex-grow">
+                "{t.text}"
               </p>
 
-              <div className="pt-8 border-t border-slate-50 flex items-center justify-between">
-                <div className="flex gap-1 text-amber-400">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                  ))}
-                </div>
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-brand-light rounded-full">
-                  <div className="w-1.5 h-1.5 rounded-full bg-brand-accent"></div>
-                  <span className="text-[9px] font-bold text-brand-primary uppercase tracking-widest">Projeto Verificado</span>
+              <div className="flex items-center gap-4 pt-6 border-t border-slate-200/50">
+                <div className="flex flex-col">
+                  <span className="font-bold text-slate-900 text-sm">{t.name}</span>
+                  <span className="text-[10px] uppercase font-bold text-brand-accent tracking-widest">{t.role}</span>
                 </div>
               </div>
             </div>

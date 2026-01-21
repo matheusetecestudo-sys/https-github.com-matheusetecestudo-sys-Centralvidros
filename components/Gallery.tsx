@@ -35,10 +35,10 @@ const Gallery: React.FC = () => {
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-                <p className="text-white font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] leading-tight mb-4 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">{service.title}</p>
+                <p className="text-white font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] leading-tight mb-4 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 shadow-sm">{service.title}</p>
                 <div className="inline-flex max-w-fit bg-brand-whatsapp text-white text-[9px] font-bold px-4 py-2.5 rounded-xl transition-all duration-500 opacity-0 group-hover:opacity-100 shadow-xl">
                   Orçar WhatsApp
                 </div>

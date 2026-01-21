@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import WhatsAppButton from '../components/WhatsAppButton';
 import { ALL_SERVICES, getServiceWhatsAppLink } from '../constants';
 
 const ServicesPage: React.FC = () => {
@@ -11,8 +8,6 @@ const ServicesPage: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen font-inter">
-      <Navbar currentPage="servicos" />
-
       <main className="pt-32 pb-24">
         <header className="py-20 bg-slate-50 border-b border-slate-100 mb-20">
           <div className="container-precision">
@@ -104,9 +99,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
-      <WhatsAppButton />
     </div>
   );
 };

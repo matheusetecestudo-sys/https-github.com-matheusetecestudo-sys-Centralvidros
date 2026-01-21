@@ -3,63 +3,63 @@ import { WHATSAPP_LINK, CTA_TEXT } from '../constants';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-40 bg-slate-50 overflow-hidden">
+    <section className="relative pt-40 pb-20 md:pt-60 md:pb-48 bg-slate-50 overflow-hidden">
       {/* Elementos Decorativos de Fundo */}
-      <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[120%] bg-white skew-x-[-12deg] z-0 pointer-events-none" />
+      <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[120%] bg-white skew-x-[-12deg] z-0 pointer-events-none hidden md:block" />
 
       <div className="container-precision relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 md:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-16 md:gap-24 items-center">
 
-          <div className="lg:col-span-7 reveal active">
-            <div className="flex items-center gap-4 mb-8">
-              <span className="w-10 h-[2px] bg-brand-accent rounded-full"></span>
-              <span className="text-[10px] md:text-xs font-black text-brand-accent uppercase tracking-[0.4em]">Vidraçaria de Alta Performance</span>
+          <div className="lg:col-span-7 reveal active text-left">
+            <div className="flex items-center gap-4 mb-10 overflow-hidden">
+              <span className="w-12 h-[2px] bg-brand-accent rounded-full"></span>
+              <span className="text-[9px] md:text-[11px] font-black text-brand-accent uppercase tracking-[0.5em] whitespace-nowrap">Vidraçaria Técnica Especializada</span>
             </div>
 
-            <h1 className="text-5xl md:text-[80px] font-black text-slate-900 leading-[0.9] mb-10 tracking-tight">
-              A Engenharia do <br />
-              <span className="text-slate-400">Vidro Moderno.</span>
+            <h1 className="text-5xl md:text-7xl lg:text-[92px] font-black text-slate-900 leading-[0.95] md:leading-[0.85] mb-12 tracking-tight">
+              A Engenharia do <br className="hidden md:block" />
+              <span className="text-slate-400 font-medium">Vidro Moderno.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-500 font-medium leading-relaxed max-w-xl mb-12">
-              Projetos sob medida em vidros e espelhos com instalação técnica imediata e acabamento padrão arquitetura.
+            <p className="text-lg md:text-2xl text-slate-500 font-medium leading-relaxed max-w-2xl mb-16">
+              Projetos sob medida em vidros e espelhos com instalação técnica imediata e acabamento padrão arquitetura de alto luxo.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-8">
+            <div className="flex flex-col sm:flex-row items-center gap-10">
               <a
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto h-[64px] flex items-center justify-center px-10 bg-brand-whatsapp text-white rounded-2xl font-bold text-sm btn-interact shadow-xl shadow-brand-whatsapp/20"
+                className="w-full sm:w-auto h-20 flex items-center justify-center px-12 bg-brand-whatsapp text-white rounded-[2rem] font-black text-sm uppercase tracking-widest btn-interact shadow-2xl shadow-brand-whatsapp/30"
               >
-                Peça seu orçamento no WhatsApp
+                Solicitar Orçamento
               </a>
 
-              <div className="flex items-center gap-4">
-                <div className="flex -space-x-3">
+              <div className="flex items-center gap-6">
+                <div className="flex -space-x-4">
                   {[1, 2, 3].map(i => (
-                    <div key={i} className="w-10 h-10 rounded-full border-4 border-white bg-slate-100 flex items-center justify-center overflow-hidden">
-                      <div className="w-full h-full bg-brand-primary/10" />
+                    <div key={i} className="w-12 h-12 md:w-14 md:h-14 rounded-full border-[6px] border-white bg-slate-100 flex items-center justify-center overflow-hidden shadow-sm">
+                      <div className="w-full h-full bg-slate-200" />
                     </div>
                   ))}
                 </div>
                 <div className="leading-tight">
-                  <p className="text-sm font-black text-slate-900">4.500+</p>
-                  <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none">Clientes Satisfeitos</p>
+                  <p className="text-base md:text-xl font-black text-slate-900 leading-none">4.500+</p>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none mt-1">Clientes Satisfeitos</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-8 py-10 border-t border-slate-200/50">
+            <div className="mt-24 grid grid-cols-2 lg:grid-cols-4 gap-12 py-12 border-t border-slate-200/60">
               {[
                 { v: "20+", l: "Anos de Mercado" },
-                { v: "48h", l: "Prazo de Entrega" },
-                { v: "SP", l: "Atendimento Local" },
-                { v: "100%", l: "Aprovação Técnica" }
+                { v: "48h", l: "Prazo Recorde" },
+                { v: "SP/REG", l: "Atendimento Full" },
+                { v: "100%", l: "Precisão Técnica" }
               ].map((item, i) => (
-                <div key={i} className="space-y-2">
-                  <p className="text-2xl font-black text-slate-900 leading-none">{item.v}</p>
-                  <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none">{item.l}</p>
+                <div key={i} className="space-y-3">
+                  <p className="text-2xl md:text-3xl font-black text-slate-900 leading-none tracking-tighter">{item.v}</p>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">{item.l}</p>
                 </div>
               ))}
             </div>

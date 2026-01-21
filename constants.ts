@@ -131,20 +131,28 @@ export const FEATURED_SERVICES: Service[] = [
 
 export const TESTIMONIALS = [
   {
-    name: "João Silva",
-    text: "Orçamento rápido pelo WhatsApp e instalação no prazo. O box ficou ótimo.",
-    role: "Cliente",
+    name: "Marcos R.",
+    text: "Trocaram o vidro da janela no mesmo dia. Atendimento rápido e preço justo.",
+    role: "Troca de Vidro",
     avatar: "/images/avatar-1.png",
     stars: 5,
     date: "há 2 dias"
   },
   {
-    name: "Maria Oliveira",
-    text: "Precisei trocar o vidro da janela urgente e eles resolveram no mesmo dia.",
-    role: "Cliente",
+    name: "Clara S.",
+    text: "O box ficou perfeito e a vedação impecável. A equipe foi muito limpa na instalação.",
+    role: "Box de Banheiro",
     avatar: "/images/avatar-2.png",
     stars: 5,
     date: "há 1 semana"
+  },
+  {
+    name: "Roberto M.",
+    text: "Instalaram os espelhos da academia com um alinhamento nota 10. Recomendo o time técnico.",
+    role: "Espelhos sob medida",
+    avatar: "/images/avatar-1.png",
+    stars: 5,
+    date: "há 2 semanas"
   }
 ];
 

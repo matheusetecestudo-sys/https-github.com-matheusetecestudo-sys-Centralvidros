@@ -95,7 +95,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white antialiased overflow-x-hidden font-inter">
       {/* Barra de Progresso Superior */}
-      <div className={`fixed top-0 left-0 w-full h-[3px] bg-blue-600 z-[250] transition-transform duration-300 origin-left ${isNavigating ? 'scale-x-100' : 'scale-x-0 opacity-0'}`} />
+      <div className={`fixed top-0 left-0 w-full h-[3px] bg-brand-accent z-[250] transition-transform duration-300 origin-left ${isNavigating ? 'scale-x-100' : 'scale-x-0 opacity-0'}`} />
 
       <Navbar onNavigate={navigate} currentPage={currentPage} />
 

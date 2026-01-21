@@ -54,9 +54,9 @@ const ServicesPage: React.FC = () => {
                     href={getServiceWhatsAppLink(service.title)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="h-14 flex items-center justify-center w-full bg-brand-whatsapp text-white rounded-xl font-bold text-xs btn-interact shadow-lg shadow-brand-whatsapp/10"
+                    className="h-16 flex items-center justify-center w-full bg-brand-whatsapp text-white rounded-xl font-bold text-base btn-interact shadow-lg shadow-brand-whatsapp/10 whitespace-nowrap"
                   >
-                    Peça seu orçamento no WhatsApp
+                    Solicitar orçamento agora
                   </a>
                 </div>
               </div>
@@ -82,9 +82,9 @@ const ServicesPage: React.FC = () => {
                   <a
                     href={getServiceWhatsAppLink("Projetos Corporativos")}
                     target="_blank"
-                    className="h-14 flex items-center justify-center px-12 bg-white text-slate-900 rounded-xl font-bold text-xs btn-interact shadow-xl inline-flex sm:w-auto"
+                    className="h-14 flex items-center justify-center px-12 bg-white text-slate-900 rounded-xl font-bold text-sm btn-interact shadow-xl inline-flex sm:w-auto whitespace-nowrap"
                   >
-                    Falar com departamento comercial
+                    Falar com o departamento comercial
                   </a>
                 </div>
                 <div className="lg:col-span-4 hidden lg:block">

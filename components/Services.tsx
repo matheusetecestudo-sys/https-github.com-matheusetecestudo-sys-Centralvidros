@@ -23,9 +23,9 @@ const Services: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigat
           <div className="lg:col-span-4 flex justify-end">
             <button
               onClick={() => onNavigate?.('servicos')}
-              className="group flex items-center gap-4 py-4 px-2 border-b-2 border-slate-100 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-brand-accent hover:border-brand-accent transition-all duration-300"
+              className="group flex items-center gap-4 py-4 px-2 border-b-2 border-slate-100 text-[11px] font-bold text-slate-400 hover:text-brand-accent hover:border-brand-accent transition-all duration-300"
             >
-              Ver catálogo completo
+              Ver catálogo técnico
               <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </button>
           </div>
@@ -63,9 +63,9 @@ const Services: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigat
                   href={getServiceWhatsAppLink(service.title)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto h-14 flex items-center justify-center px-10 bg-brand-whatsapp text-white rounded-xl font-bold text-xs btn-interact shadow-lg shadow-brand-whatsapp/10"
+                  className="w-full sm:w-auto h-16 flex items-center justify-center px-10 bg-brand-whatsapp text-white rounded-xl font-bold text-base btn-interact shadow-lg shadow-brand-whatsapp/10 whitespace-nowrap"
                 >
-                  Peça seu orçamento no WhatsApp
+                  Consultar orçamento
                 </a>
               </div>
             </div>

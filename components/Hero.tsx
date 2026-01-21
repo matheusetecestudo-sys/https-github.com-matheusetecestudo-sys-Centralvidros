@@ -30,9 +30,9 @@ const Hero: React.FC = () => {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto h-20 flex items-center justify-center px-12 bg-brand-whatsapp text-white rounded-[2rem] font-black text-sm uppercase tracking-widest btn-interact shadow-2xl shadow-brand-whatsapp/30"
+                className="w-full sm:w-auto h-20 flex items-center justify-center px-12 bg-brand-whatsapp text-white rounded-[2rem] font-black text-xl btn-interact shadow-2xl shadow-brand-whatsapp/30 whitespace-nowrap"
               >
-                Solicitar Orçamento
+                Solicitar orçamento
               </a>
 
               <div className="flex items-center gap-6">

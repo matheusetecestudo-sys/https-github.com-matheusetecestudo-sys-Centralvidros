@@ -70,9 +70,9 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden lg:flex items-center justify-center px-8 h-12 bg-brand-whatsapp text-white rounded-xl font-bold text-[10px] uppercase tracking-widest btn-interact shadow-xl shadow-brand-whatsapp/10 focus:outline-none"
+              className="hidden lg:flex items-center justify-center px-8 h-12 bg-brand-whatsapp text-white rounded-xl font-bold text-sm btn-interact shadow-xl shadow-brand-whatsapp/10 focus:outline-none whitespace-nowrap"
             >
-              Orçamento Rápido
+              Orçamento rápido
             </a>
 
             <button
@@ -120,9 +120,9 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-4">Atendimento Técnico</p>
               <a
                 href={WHATSAPP_LINK}
-                className="w-full h-16 flex items-center justify-center bg-brand-whatsapp text-white rounded-2xl font-black text-sm uppercase tracking-widest btn-interact shadow-2xl shadow-brand-whatsapp/20"
+                className="w-full h-16 flex items-center justify-center bg-brand-whatsapp text-white rounded-2xl font-black text-lg btn-interact shadow-2xl shadow-brand-whatsapp/20 whitespace-nowrap"
               >
-                WhatsApp Oficial
+                Chamar no WhatsApp
               </a>
             </div>
           </div>

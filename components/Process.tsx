@@ -67,9 +67,9 @@ const Process: React.FC = () => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="h-14 flex items-center justify-center px-10 bg-brand-whatsapp text-white rounded-xl font-bold text-xs btn-interact shadow-lg shadow-brand-whatsapp/20"
+              className="h-16 flex items-center justify-center px-10 bg-brand-whatsapp text-white rounded-xl font-bold text-base btn-interact shadow-lg shadow-brand-whatsapp/20 whitespace-nowrap"
             >
-              Peça seu orçamento no WhatsApp
+              Consultar especialista agora
             </a>
           </div>
         </div>

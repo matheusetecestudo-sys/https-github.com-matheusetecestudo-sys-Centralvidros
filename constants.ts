@@ -63,7 +63,7 @@ export const ALL_SERVICES: Service[] = [
     id: 'vidro-temperado',
     title: "Vidro temperado",
     description: "Vidros de alta resistência para projetos que exigem máxima segurança e durabilidade.",
-    imageUrl: "/images/vidro-temperado-quebrado.jpg"
+    imageUrl: "/images/vidro-temperado-amostra.png"
   },
   {
     id: 'vidro-comum',
@@ -117,7 +117,7 @@ export const ALL_SERVICES: Service[] = [
     id: 'fachadas-vidro',
     title: "Fachadas de vidro",
     description: "Projetos de fachadas em pele de vidro ou vidros temperados para prédios e lojas.",
-    imageUrl: "/images/fachada.jpg"
+    imageUrl: "/images/fachada-principal.jpg"
   }
 ];
 

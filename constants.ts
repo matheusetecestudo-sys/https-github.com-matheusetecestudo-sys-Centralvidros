@@ -51,7 +51,7 @@ export const ALL_SERVICES: Service[] = [
     id: 'troca-vidro',
     title: "Troca de vidro quebrado",
     description: "Substituição rápida e segura de vidros quebrados em janelas, portas e móveis.",
-    imageUrl: "/images/manutencao.jpg"
+    imageUrl: "/images/troca-vidro-quebrado.jpg"
   },
   {
     id: 'portas-vidro',
@@ -63,7 +63,7 @@ export const ALL_SERVICES: Service[] = [
     id: 'vidro-temperado',
     title: "Vidro temperado",
     description: "Vidros de alta resistência para projetos que exigem máxima segurança e durabilidade.",
-    imageUrl: "/images/fachada.jpg"
+    imageUrl: "/images/vidro-temperado-quebrado.jpg"
   },
   {
     id: 'vidro-comum',
@@ -87,7 +87,7 @@ export const ALL_SERVICES: Service[] = [
     id: 'vitrines-comerciais',
     title: "Vitrines comerciais",
     description: "Instalação e manutenção de vitrines em vidro para lojas e estabelecimentos comerciais.",
-    imageUrl: "/images/fachada.jpg"
+    imageUrl: "/images/vitrine-comercial.jpg"
   },
   {
     id: 'guarda-corpo',

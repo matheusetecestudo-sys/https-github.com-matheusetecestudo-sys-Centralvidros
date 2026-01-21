@@ -17,14 +17,20 @@
             --brand-primary: #0f172a;
             --brand-accent: #2563eb;
             --brand-whatsapp: #22c55e;
-            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-bg: rgba(255, 255, 255, 0.75);
             --glass-border: rgba(255, 255, 255, 0.1);
             --transition-main: 200ms cubic-bezier(0.16, 1, 0.3, 1);
-            --space-unit: 4px;
+            --space-unit: 8px;
+            /* Base 8px para escala consistente */
         }
 
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Força alinhamento para o topo de seções na navegação */
+        section {
+            scroll-margin-top: 80px;
         }
 
         body {
@@ -35,24 +41,53 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             line-height: 1.6;
-            /* Body baseline */
         }
 
-        /* Grid Margins (Clamp) */
+        /* 2026 Grid System */
         .container-precision {
             width: 100%;
             max-width: 1280px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: clamp(16px, 5vw, 64px);
-            padding-right: clamp(16px, 5vw, 64px);
+            margin: 0 auto;
+            padding: 0 clamp(16px, 5vw, 64px);
         }
 
-        /* Motion System */
+        .grid-12 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .grid-12 {
+                grid-template-columns: repeat(8, 1fr);
+                gap: 32px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .grid-12 {
+                grid-template-columns: repeat(12, 1fr);
+                gap: 40px;
+            }
+        }
+
+        /* Motion System & Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                transition: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+
         .reveal {
             opacity: 0;
             transform: translateY(12px);
-            /* Menor distanciamento para parecer mais rápido */
             transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
             will-change: transform, opacity;
         }
@@ -62,10 +97,13 @@
             transform: translateY(0);
         }
 
-        /* Micro-interactions */
+        /* Button & Interactive Evolution */
         .btn-interact {
-            transition: transform var(--transition-main), background-color var(--transition-main), box-shadow var(--transition-main);
+            position: relative;
+            transition: all var(--transition-main);
             transform-origin: center;
+            outline: 2px solid transparent;
+            outline-offset: 4px;
         }
 
         .btn-interact:hover {
@@ -76,30 +114,45 @@
             transform: scale(0.98);
         }
 
-        /* Typography Lock */
+        .btn-interact:focus-visible {
+            outline-color: var(--brand-accent);
+        }
+
+        .btn-interact:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Typography Lockdown */
         h1,
         h2,
         h3 {
-            line-height: 1.2;
-            letter-spacing: -0.02em;
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            font-weight: 900;
         }
 
         p {
-            line-height: 1.6;
+            color: #64748b;
         }
 
-        /* Scrollbar Refinement */
+        /* Scrollbar Elite */
         ::-webkit-scrollbar {
             width: 6px;
         }
 
         ::-webkit-scrollbar-track {
-            background: #f8fafc;
+            background: #fff;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
+            background: #e2e8f0;
             border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cbd5e1;
         }
 
         #app-loader {
@@ -113,8 +166,8 @@
         }
 
         .spinner {
-            width: 32px;
-            height: 32px;
+            width: 24px;
+            height: 24px;
             border: 2px solid #f1f5f9;
             border-top: 2px solid var(--brand-accent);
             border-radius: 50%;

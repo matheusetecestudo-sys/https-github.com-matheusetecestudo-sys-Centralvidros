@@ -1,20 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Cristal Glass - Engenharia e Design em Vidros
 
-# Run and deploy your AI Studio app
+Site premium desenvolvido com padrões de UX/UI 2026, focado em alta conversão para WhatsApp e performance técnica superior.
 
-This contains everything you need to run your app locally.
+## ✨ Diferenciais Técnicos
 
-View your app in AI Studio: https://ai.studio/apps/drive/15_9wKthfmcJqAjRZ-zQyivSo6bCp1nuB
+- **Grid System Precision**: Arquitetura de 12 colunas real com alinhamento óptico e baseline lock.
+- **Motion System 200ms**: Transições fluidas e micro-interações otimizadas para velocidade percebida imediata.
+- **Visual Conversion Path**: CTAs estrategicamente posicionados com contraste máximo para WhatsApp.
+- **Performance Nível A**: Zero Cumulative Layout Shift (CLS), suporte a `prefers-reduced-motion` e carregamento otimizado.
+- **Glassmorphism 2.0**: Estética moderna de transparência e reflexos que refletem a qualidade do material da empresa.
 
-## Run Locally
+## 🚀 Como Executar
 
-**Prerequisites:**  Node.js
+**Pré-requisitos:** Node.js (v18+)
 
+1. Clone o repositório
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠️ Tecnologias
+
+- React + TypeScript
+- Tailwind CSS
+- Lucide Icons / Custom SVGs
+- Intersection Observer API for Motion
+
+---
+*Projeto refinado por UX Engineers para atingir o estado de arte em conversão e design premium.*

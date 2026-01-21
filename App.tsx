@@ -44,11 +44,11 @@ function App() {
       const hash = window.location.hash.replace('#', '') || 'home';
       if (hash !== currentPage) {
         setIsNavigating(true);
-        // Transição de estado mais rápida
         requestAnimationFrame(() => {
           setCurrentPage(hash);
-          window.scrollTo(0, 0);
-          setTimeout(() => setIsNavigating(false), 300);
+          window.scrollTo({ top: 0, behavior: 'instant' });
+          // Reduzimos o timeout para 200ms para casar com a variável de transição CSS
+          setTimeout(() => setIsNavigating(false), 200);
         });
       }
     };
@@ -68,6 +68,7 @@ function App() {
   }, [currentPage, isNavigating, initLucide, initObserver]);
 
   const navigate = (page: string) => {
+    if (page === currentPage) return;
     window.location.hash = page;
   };
 
@@ -78,7 +79,7 @@ function App() {
       case 'sobre': return <AboutPage />;
       default:
         return (
-          <>
+          <div className="flex flex-col">
             <Hero />
             <Services onNavigate={navigate} />
             <Process />
@@ -86,19 +87,19 @@ function App() {
             <FAQ />
             <Trust />
             <Testimonials />
-          </>
+          </div>
         );
     }
   }, [currentPage]);
 
   return (
-    <div className="min-h-screen bg-white antialiased overflow-x-hidden selection:bg-blue-600 selection:text-white font-inter">
+    <div className="min-h-screen bg-white antialiased overflow-x-hidden font-inter">
       {/* Barra de Progresso Superior */}
-      <div className={`fixed top-0 left-0 w-full h-[2px] bg-blue-600 z-[200] transition-transform duration-500 origin-left ${isNavigating ? 'scale-x-100' : 'scale-x-0'}`} />
+      <div className={`fixed top-0 left-0 w-full h-[3px] bg-blue-600 z-[250] transition-transform duration-300 origin-left ${isNavigating ? 'scale-x-100' : 'scale-x-0 opacity-0'}`} />
 
       <Navbar onNavigate={navigate} currentPage={currentPage} />
 
-      <main className={`relative z-10 transition-all duration-300 ease-out ${isNavigating ? 'opacity-30 blur-sm' : 'opacity-100 blur-0'}`}>
+      <main className={`relative z-10 transition-all duration-200 ${isNavigating ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
         {pageContent}
       </main>
 

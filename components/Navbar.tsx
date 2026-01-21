@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
   return (
     <>
-      <header className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled || isMenuOpen ? 'py-4 bg-white shadow-md' : 'py-6 bg-transparent'
+      <header className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrolled || isMenuOpen ? 'py-4 glass-effect shadow-lg shadow-emerald-900/5' : 'py-6 bg-transparent'
         }`}>
         <div className="max-w-7xl mx-auto px-5 md:px-10">
           <div className="flex justify-between items-center h-10">

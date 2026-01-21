@@ -8,21 +8,26 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           <div className="reveal active text-center lg:text-left">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-slate-900 leading-[1] mb-6 tracking-tighter">
-              Vidros com <br />
-              Instalação <br />
-              <span className="text-emerald-600">Rápida.</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 rounded-full border border-emerald-100 mb-8">
+              <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+              <span className="text-[10px] font-black text-emerald-700 uppercase tracking-widest leading-none">Instalação em até 48h</span>
+            </div>
+
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-slate-900 leading-[0.9] mb-8 tracking-tighter">
+              Soluções em <br />
+              Vidros de <br />
+              <span className="text-emerald-600 italic">Elite.</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-slate-500 mb-10 max-w-xl mx-auto lg:mx-0 font-medium">
-              Box de vidro, janelas, portas e manutenção. <br className="hidden md:block" />
-              Orçamentos sem burocracia pelo WhatsApp.
+            <p className="text-lg md:text-xl text-slate-500 mb-10 max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed">
+              Box, espelhos, janelas e manutenção com selo de <br className="hidden md:block" />
+              qualidade internacional e atendimento instantâneo.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
               <a
                 href={WHATSAPP_LINK}
-                className="group inline-flex items-center justify-center gap-3 px-10 py-6 text-base font-black text-white bg-gradient-to-r from-emerald-600 to-emerald-500 rounded-2xl shadow-xl shadow-emerald-600/30 hover:shadow-emerald-600/50 hover:-translate-y-1 transition-all active:scale-95 uppercase tracking-wide"
+                className="group inline-flex items-center justify-center gap-4 px-12 py-7 text-base font-black text-white bg-gradient-to-r from-emerald-600 to-emerald-500 rounded-3xl shadow-2xl shadow-emerald-600/30 hover:shadow-emerald-600/50 hover:-translate-y-1 transition-all active:scale-95 uppercase tracking-widest"
               >
                 {CTA_TEXT}
                 <div className="bg-white/20 p-2 rounded-xl group-hover:rotate-12 transition-transform">
@@ -32,13 +37,21 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="reveal active hidden lg:block">
-            <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl border-8 border-slate-50">
+          <div className="reveal active hidden lg:block relative">
+            <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl border-8 border-slate-50 rotate-1 group hover:rotate-0 transition-transform duration-700">
               <img
                 src="/images/box-banheiro.jpg"
                 alt="Box de Banheiro Cristal Glass"
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
+            </div>
+            {/* Trust badge flutuante */}
+            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-[2.5rem] shadow-2xl border border-slate-50 glass-effect">
+              <div className="flex flex-col items-center">
+                <span className="text-2xl font-black text-slate-900 italic">100%</span>
+                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Seguro</span>
+              </div>
             </div>
           </div>
 

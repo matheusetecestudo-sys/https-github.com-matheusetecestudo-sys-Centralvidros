@@ -1,25 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Cristal Glass | Engenharia em Vidros</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <style>
-        :root { 
-            --emerald-main: #059669; 
+        :root {
+            --emerald-main: #059669;
             --emerald-hover: #047857;
             --slate-track: #f1f5f9;
         }
 
-        /* Barra de Rolagem Personalizada (Webkit: Chrome, Safari, Edge) */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Seleção Personalizada */
+        ::selection {
+            background-color: var(--emerald-main);
+            color: white;
+        }
+
+        /* Barra de Rolagem Personalizada */
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -52,43 +62,70 @@
             margin: 0;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
         /* Animações otimizadas para GPU */
-        .reveal { 
-            opacity: 0; 
-            transform: translateY(15px); 
-            transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        .reveal {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: transform, opacity;
         }
-        
-        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
 
         .img-placeholder {
             background: linear-gradient(110deg, #f8fafc 8%, #f1f5f9 18%, #f8fafc 33%);
             background-size: 200% 100%;
             animation: 1.5s shine linear infinite;
         }
-        
-        @keyframes shine { to { background-position-x: -200%; } }
+
+        @keyframes shine {
+            to {
+                background-position-x: -200%;
+            }
+        }
 
         #app-loader {
-            position: fixed; inset: 0; background: #fff; z-index: 9999;
-            display: flex; align-items: center; justify-content: center;
+            position: fixed;
+            inset: 0;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: opacity 0.4s ease-out;
         }
 
-        .spinner { 
-            width: 32px; height: 32px; 
-            border: 3px solid #f3f3f3; 
-            border-top: 3px solid var(--emerald-main); 
-            border-radius: 50%; 
-            animation: spin 0.8s linear infinite; 
+        .spinner {
+            width: 32px;
+            height: 32px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--emerald-main);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
         }
-        @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* Previne o pulo de layout no mobile */
-        .mobile-menu-open { overflow: hidden !important; }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .mobile-menu-open {
+            overflow: hidden !important;
+        }
     </style>
 
     <script type="importmap">
@@ -104,10 +141,14 @@
 }
 </script>
 </head>
+
 <body>
-    <div id="app-loader"><div class="spinner"></div></div>
+    <div id="app-loader">
+        <div class="spinner"></div>
+    </div>
     <div id="root"></div>
     <script type="module" src="index.tsx"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </body>
+
 </html>

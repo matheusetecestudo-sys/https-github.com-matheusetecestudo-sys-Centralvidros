@@ -33,7 +33,7 @@ export const ALL_SERVICES: Service[] = [
     id: 'box-de-vidro',
     title: "Box de vidro",
     description: "Vidros temperados para banheiros com diversas opções de acabamento.",
-    imageUrl: "/images/Box de vidro.png"
+    imageUrl: "/images/box-banheiro.jpg"
   },
   {
     id: 'janelas-de-vidro',
@@ -51,19 +51,19 @@ export const ALL_SERVICES: Service[] = [
     id: 'espelhos-sob-medida',
     title: "Espelhos sob medida",
     description: "Espelhos lapidados e bisotados para salas e banheiros.",
-    imageUrl: "/images/Espelhos sob medida.png"
+    imageUrl: "/images/espelhos.jpg"
   },
   {
     id: 'envidracamento-sacadas',
     title: "Envidraçamento de sacadas",
     description: "Fechamento de varandas com sistema de abertura total.",
-    imageUrl: "/images/Envidraçamento de sacadas.png"
+    imageUrl: "/images/sacada.jpg"
   },
   {
     id: 'vidros-temperados',
     title: "Vidros temperados",
     description: "Vidros de alta resistência para diversas aplicações.",
-    imageUrl: "/images/Vidros temperados.png"
+    imageUrl: "/images/fachada.jpg"
   },
   {
     id: 'vidros-laminados',
@@ -75,7 +75,7 @@ export const ALL_SERVICES: Service[] = [
     id: 'fachadas-de-vidro',
     title: "Fachadas de vidro",
     description: "Projetos de fachadas comerciais e residenciais (Pele de vidro).",
-    imageUrl: "/images/Fachadas de vidro.png"
+    imageUrl: "/images/fachada.jpg"
   },
   {
     id: 'guarda-corpo-vidro',

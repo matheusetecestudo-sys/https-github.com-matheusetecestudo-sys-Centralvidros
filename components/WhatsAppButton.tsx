@@ -5,7 +5,7 @@ const WhatsAppButton: React.FC = () => {
   return (
     <div className="fixed bottom-6 right-6 z-[120] flex flex-col items-end gap-3 pointer-events-none">
       <div className="bg-white px-5 py-3 rounded-2xl shadow-xl border border-slate-100 animate-fade-in-up pointer-events-auto mb-1">
-        <p className="text-[10px] font-black text-[#00966d] uppercase tracking-widest leading-none mb-1">Técnico Online</p>
+        <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest leading-none mb-1">Técnico Online</p>
         <p className="text-sm font-black text-slate-900 leading-none">Pedir Orçamento</p>
       </div>
 

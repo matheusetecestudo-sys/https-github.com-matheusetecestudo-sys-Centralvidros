@@ -45,9 +45,9 @@ const Process: React.FC = () => {
         </div>
 
         <div className="mt-16 text-center reveal active">
-           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 px-12 py-6 bg-emerald-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-emerald-700 transition-all shadow-xl active:scale-95">
-              {CTA_TEXT}
-           </a>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 px-12 py-6 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:shadow-emerald-500/40 hover:-translate-y-1 transition-all shadow-xl shadow-emerald-600/20 active:scale-95">
+            {CTA_TEXT}
+          </a>
         </div>
       </div>
     </section>

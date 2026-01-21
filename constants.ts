@@ -27,106 +27,106 @@ export interface Service {
   tag?: string;
 }
 
-// Catálogo Completo com 15 Serviços (Um para cada imagem .png)
+// LISTA COMPLETA DE SERVIÇOS (15 Itens)
 export const ALL_SERVICES: Service[] = [
   {
-    id: 'box-de-vidro',
-    title: "Box de vidro",
-    description: "Vidros temperados para banheiros com diversas opções de acabamento.",
+    id: 'box-banheiro',
+    title: "Box de banheiro",
+    description: "Instalação de box em vidro temperado com roldanas de alta performance e vedação garantida.",
     imageUrl: "/images/box-banheiro.jpg"
   },
   {
-    id: 'janelas-de-vidro',
-    title: "Janelas de vidro",
-    description: "Instalação de janelas em vidro temperado ou comum.",
-    imageUrl: "/images/janelas.jpg"
-  },
-  {
-    id: 'portas-de-vidro',
-    title: "Portas de vidro",
-    description: "Soluções elegantes para entradas e divisórias de ambientes.",
-    imageUrl: "/images/divisorias.jpg"
-  },
-  {
-    id: 'espelhos-sob-medida',
+    id: 'espelhos-medida',
     title: "Espelhos sob medida",
-    description: "Espelhos lapidados e bisotados para salas e banheiros.",
+    description: "Espelhos de cristal com acabamento lapidado ou bisotê, ideais para banheiros, salas e closets.",
     imageUrl: "/images/espelhos.jpg"
   },
   {
-    id: 'envidracamento-sacadas',
-    title: "Envidraçamento de sacadas",
-    description: "Fechamento de varandas com sistema de abertura total.",
-    imageUrl: "/images/sacada.jpg"
+    id: 'janelas-vidro',
+    title: "Janelas de vidro",
+    description: "Janelas em vidro temperado ou comum, com sistemas de correr ou basculantes sob medida.",
+    imageUrl: "/images/janelas.jpg"
   },
   {
-    id: 'vidros-temperados',
-    title: "Vidros temperados",
-    description: "Vidros de alta resistência para diversas aplicações.",
-    imageUrl: "/images/fachada.jpg"
-  },
-  {
-    id: 'vidros-laminados',
-    title: "Vidros laminados",
-    description: "Vidros de segurança para coberturas e áreas de risco.",
-    imageUrl: "/images/Vidros laminados.png"
-  },
-  {
-    id: 'fachadas-de-vidro',
-    title: "Fachadas de vidro",
-    description: "Projetos de fachadas comerciais e residenciais (Pele de vidro).",
-    imageUrl: "/images/fachada.jpg"
-  },
-  {
-    id: 'guarda-corpo-vidro',
-    title: "Guarda-corpo de vidro",
-    description: "Segurança e design para escadas e sacadas.",
-    imageUrl: "/images/guarda-corpo.jpg"
-  },
-  {
-    id: 'manutencao-vidro',
-    title: "Manutenção e troca de vidro quebrado",
-    description: "Troca rápida e segura de vidros avariados.",
+    id: 'troca-vidro',
+    title: "Troca de vidro quebrado",
+    description: "Substituição rápida e segura de vidros quebrados em janelas, portas e móveis.",
     imageUrl: "/images/manutencao.jpg"
   },
   {
-    id: 'tampos-de-mesa',
-    title: "Tampos de mesa",
-    description: "Vidros sob medida para mesas de jantar e escritórios.",
-    imageUrl: "/images/Tampos de mesa.png"
-  },
-  {
-    id: 'prateleiras-de-vidro',
-    title: "Prateleiras de vidro",
-    description: "Soluções práticas e elegantes para organização.",
-    imageUrl: "/images/prateleiras.jpg"
-  },
-  {
-    id: 'divisorias-de-vidro',
-    title: "Divisórias de vidro",
-    description: "Divisão de ambientes corporativos e residenciais.",
+    id: 'portas-vidro',
+    title: "Portas de vidro",
+    description: "Portas de abrir ou correr com ferragens modernas para residências e empresas.",
     imageUrl: "/images/divisorias.jpg"
   },
   {
-    id: 'coberturas-de-vidro',
-    title: "Coberturas de vidro",
-    description: "Proteção contra chuva com entrada de luz natural.",
-    imageUrl: "/images/Coberturas de vidro.png"
+    id: 'vidro-temperado',
+    title: "Vidro temperado",
+    description: "Vidros de alta resistência para projetos que exigem máxima segurança e durabilidade.",
+    imageUrl: "/images/fachada.jpg"
   },
   {
-    id: 'muro-de-vidro',
-    title: "Muro de vidro",
-    description: "Segurança com visibilidade total para sua fachada.",
-    imageUrl: "/images/Muro de vidro.png"
+    id: 'vidro-comum',
+    title: "Vidro comum",
+    description: "Opções versáteis em diversas espessuras para aplicações variadas em vidraçaria.",
+    imageUrl: "/images/janelas.jpg"
+  },
+  {
+    id: 'manutencao-portas',
+    title: "Manutenção de portas e janelas",
+    description: "Troca de roldanas, guias, batedores e regulagem completa para o funcionamento perfeito.",
+    imageUrl: "/images/manutencao.jpg"
+  },
+  {
+    id: 'fechamento-sacada',
+    title: "Fechamento de sacada / varanda",
+    description: "Envidraçamento de sacadas com sistema retrátil para aproveitar seu ambiente em qualquer clima.",
+    imageUrl: "/images/sacada.jpg"
+  },
+  {
+    id: 'vitrines-comerciais',
+    title: "Vitrines comerciais",
+    description: "Instalação e manutenção de vitrines em vidro para lojas e estabelecimentos comerciais.",
+    imageUrl: "/images/fachada.jpg"
+  },
+  {
+    id: 'guarda-corpo',
+    title: "Guarda-corpo de vidro",
+    description: "Segurança e elegância para escadas e sacadas com fixação técnica certificada.",
+    imageUrl: "/images/guarda-corpo.jpg"
+  },
+  {
+    id: 'tampos-mesa',
+    title: "Tampos de mesa de vidro",
+    description: "Vidros sob medida com lapidação de alta precisão para móveis e mesas de jantar.",
+    imageUrl: "/images/espelhos.jpg"
+  },
+  {
+    id: 'prateleiras-vidro',
+    title: "Prateleiras de vidro",
+    description: "Soluções práticas e modernas para organização e exposição de produtos ou objetos.",
+    imageUrl: "/images/prateleiras.jpg"
+  },
+  {
+    id: 'vidros-especiais',
+    title: "Vidros fumê, bronze e refletivo",
+    description: "Vidros decorativos e funcionais que garantem privacidade e controle de luminosidade.",
+    imageUrl: "/images/fachada.jpg"
+  },
+  {
+    id: 'fachadas-vidro',
+    title: "Fachadas de vidro",
+    description: "Projetos de fachadas em pele de vidro ou vidros temperados para prédios e lojas.",
+    imageUrl: "/images/fachada.jpg"
   }
 ];
 
-// 4 Serviços Principais para a Home
+// 4 SERVIÇOS EM DESTAQUE ( Homepage - Prioridade Máxima )
 export const FEATURED_SERVICES: Service[] = [
   { ...ALL_SERVICES[0], tag: "Mais Pedido" },
-  { ...ALL_SERVICES[1], tag: "Pronta Entrega" },
-  { ...ALL_SERVICES[2], tag: "Alta Resistência" },
-  { ...ALL_SERVICES[9], tag: "Urgente" }
+  { ...ALL_SERVICES[1], tag: "Acabamento Premium" },
+  { ...ALL_SERVICES[2], tag: "Instalação Rápida" },
+  { ...ALL_SERVICES[3], tag: "Atendimento Urgente" }
 ];
 
 export const TESTIMONIALS = [

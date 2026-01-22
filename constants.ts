@@ -2,19 +2,32 @@ export const CLIENT_CONFIG = {
   name: "Cristal Glass",
   city: "São Paulo e Região",
   neighborhoods: "Atendimento rápido em toda a cidade",
-  whatsapp: "5511999999999",
-  phoneDisplay: "(11) 99999-9999",
+  whatsapp: "5511992876219",
+  phoneDisplay: "(11) 99287-6219",
   email: "contato@cristalglass.com.br",
   address: "Atendimento em domicílio e Showroom",
   openingHours: "Seg-Sex: 08:00 às 18:00 | Sáb: 08:00 às 13:00",
   message: "Olá! Gostaria de pedir um orçamento pelo WhatsApp."
 };
 
-export const WHATSAPP_LINK = `https://wa.me/${CLIENT_CONFIG.whatsapp}?text=${encodeURIComponent(CLIENT_CONFIG.message)}`;
+/**
+ * Função Senior de conversão para gerar links de WhatsApp com rastreabilidade de contexto.
+ * @param origin - Onde o clique ocorreu (ex: 'Hero', 'Serviços', 'Footer')
+ * @param detail - Detalhe específico (ex: nome do serviço ou botão)
+ */
+export const getWhatsAppLink = (origin: string, detail: string = "Geral") => {
+  const msg = `Olá! Gostaria de solicitar um orçamento.\n\n` +
+    `*Origem:* ${origin}\n` +
+    `*Interesse:* ${detail}\n\n` +
+    `Vim pelo site e aguardo o retorno.`;
+
+  return `https://wa.me/${CLIENT_CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+};
+
+export const WHATSAPP_LINK = getWhatsAppLink("Site", "Geral");
 
 export const getServiceWhatsAppLink = (serviceName: string) => {
-  const msg = `Olá! Vi no site e gostaria de um orçamento para ${serviceName}.`;
-  return `https://wa.me/${CLIENT_CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+  return getWhatsAppLink("Página de Serviços", serviceName);
 };
 
 export const CTA_TEXT = "Peça seu orçamento no WhatsApp";

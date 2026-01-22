@@ -1,5 +1,5 @@
 import React from 'react';
-import { WHATSAPP_LINK, CLIENT_CONFIG, ALL_SERVICES, getServiceWhatsAppLink } from '../constants';
+import { getWhatsAppLink, WHATSAPP_LINK, CLIENT_CONFIG, ALL_SERVICES, getServiceWhatsAppLink } from '../constants';
 
 interface FooterProps {
   onNavigate?: (page: string) => void;
@@ -66,7 +66,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </div>
               <div className="flex justify-center md:justify-start">
                 <a
-                  href={WHATSAPP_LINK}
+                  href={getWhatsAppLink("Rodapé", "Atendimento Comercial")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-14 flex items-center justify-center px-10 bg-brand-whatsapp text-white rounded-2xl font-bold text-sm btn-interact shadow-2xl shadow-brand-whatsapp/20 whitespace-nowrap"

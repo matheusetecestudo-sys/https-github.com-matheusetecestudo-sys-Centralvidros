@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { WHATSAPP_LINK, CLIENT_CONFIG } from '../constants';
+import { getWhatsAppLink, WHATSAPP_LINK, CLIENT_CONFIG } from '../constants';
 
 const ContactPage: React.FC = () => {
   useEffect(() => {
@@ -38,7 +38,7 @@ const ContactPage: React.FC = () => {
 
                 <div className="space-y-12 mb-12">
                   <a
-                    href={WHATSAPP_LINK}
+                    href={getWhatsAppLink("Página de Contato", "Botão WhatsApp Imediato")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex items-center justify-between p-6 bg-white/5 rounded-3xl border border-white/5 hover:bg-brand-whatsapp transition-all duration-500"

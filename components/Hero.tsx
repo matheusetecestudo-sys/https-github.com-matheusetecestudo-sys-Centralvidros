@@ -1,5 +1,5 @@
 import React from 'react';
-import { WHATSAPP_LINK, CTA_TEXT } from '../constants';
+import { getWhatsAppLink, WHATSAPP_LINK, CTA_TEXT } from '../constants';
 
 const Hero: React.FC = () => {
   return (
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
 
             <div className="flex flex-col items-center justify-center gap-8 md:gap-10 w-full">
               <a
-                href={WHATSAPP_LINK}
+                href={getWhatsAppLink("Início", "Botão CTA Principal")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto h-20 flex items-center justify-center px-8 sm:px-12 bg-brand-whatsapp text-white rounded-[2rem] font-black text-xl btn-interact shadow-2xl shadow-brand-whatsapp/30 whitespace-nowrap"

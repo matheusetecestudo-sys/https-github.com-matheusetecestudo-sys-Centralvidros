@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { WHATSAPP_LINK } from '../constants';
+import { getWhatsAppLink, WHATSAPP_LINK } from '../constants';
 
 const WhatsAppButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,7 +20,7 @@ const WhatsAppButton: React.FC = () => {
         </div>
 
         <a
-          href={WHATSAPP_LINK}
+          href={getWhatsAppLink("Site", "Botão Flutuante")}
           target="_blank"
           rel="noopener noreferrer"
           className="w-16 h-16 bg-brand-whatsapp rounded-2xl flex items-center justify-center text-white shadow-2xl shadow-brand-whatsapp/40 relative group active:scale-95 transition-all outline-none touch-manipulation focus:ring-4 focus:ring-brand-whatsapp/20"

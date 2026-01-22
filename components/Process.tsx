@@ -1,5 +1,5 @@
 import React from 'react';
-import { WHATSAPP_LINK, CTA_TEXT } from '../constants';
+import { getWhatsAppLink, WHATSAPP_LINK, CTA_TEXT } from '../constants';
 
 const Process: React.FC = () => {
   const steps = [
@@ -64,7 +64,7 @@ const Process: React.FC = () => {
               <p className="text-slate-500 font-medium">Fale agora com nosso time técnico.</p>
             </div>
             <a
-              href={WHATSAPP_LINK}
+              href={getWhatsAppLink("Início", "Seção Processo/Metodologia")}
               target="_blank"
               rel="noopener noreferrer"
               className="h-16 w-full sm:w-auto flex items-center justify-center px-10 bg-brand-whatsapp text-white rounded-xl font-bold text-base btn-interact shadow-lg shadow-brand-whatsapp/20 whitespace-nowrap"

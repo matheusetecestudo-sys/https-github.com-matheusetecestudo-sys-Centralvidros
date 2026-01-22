@@ -35,6 +35,11 @@ const Testimonials: React.FC = () => {
               </p>
 
               <div className="flex items-center gap-4 pt-6 border-t border-slate-200/50">
+                <img
+                  src={t.avatar}
+                  alt={t.name}
+                  className="w-12 h-12 rounded-full object-cover border-2 border-slate-100 shadow-sm"
+                />
                 <div className="flex flex-col">
                   <span className="font-bold text-slate-900 text-sm">{t.name}</span>
                   <span className="text-[10px] uppercase font-bold text-brand-accent tracking-widest">{t.role}</span>

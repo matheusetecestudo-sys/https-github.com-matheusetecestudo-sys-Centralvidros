@@ -1,5 +1,5 @@
 import React from 'react';
-import { WHATSAPP_LINK } from '../constants';
+import { getWhatsAppLink, WHATSAPP_LINK } from '../constants';
 
 const Trust: React.FC = () => {
   const stats = [
@@ -53,7 +53,7 @@ const Trust: React.FC = () => {
                   Enviamos um especialista para avaliar seu projeto sem compromisso. Segurança e economia desde a primeira conversa.
                 </p>
                 <a
-                  href={WHATSAPP_LINK}
+                  href={getWhatsAppLink("Início", "Seção Credibilidade/Análise Técnica")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full h-14 flex items-center justify-center bg-brand-whatsapp text-white rounded-xl font-bold text-base btn-interact shadow-lg shadow-brand-whatsapp/20 whitespace-nowrap"

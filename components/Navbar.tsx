@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { WHATSAPP_LINK } from '../constants';
+import { getWhatsAppLink, WHATSAPP_LINK } from '../constants';
 
 interface NavbarProps {
   onNavigate: (page: string) => void;
@@ -67,7 +67,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
           <div className="flex items-center gap-4">
             <a
-              href={WHATSAPP_LINK}
+              href={getWhatsAppLink("Navbar", "Orçamento Rápido")}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:flex items-center justify-center px-8 h-12 bg-brand-whatsapp text-white rounded-xl font-bold text-sm btn-interact shadow-xl shadow-brand-whatsapp/10 focus:outline-none whitespace-nowrap"
@@ -119,7 +119,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
             <div className={`transition-all duration-700 delay-400 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-4">Atendimento Técnico</p>
               <a
-                href={WHATSAPP_LINK}
+                href={getWhatsAppLink("Menu Mobile", "Atendimento Técnico")}
                 className="w-full h-16 flex items-center justify-center bg-brand-whatsapp text-white rounded-2xl font-black text-lg btn-interact shadow-2xl shadow-brand-whatsapp/20 whitespace-nowrap"
               >
                 Chamar no WhatsApp

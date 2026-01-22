@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { WHATSAPP_LINK } from '../constants';
+import { getWhatsAppLink, WHATSAPP_LINK } from '../constants';
 
 const AboutPage: React.FC = () => {
   useEffect(() => {
@@ -78,7 +78,7 @@ const AboutPage: React.FC = () => {
             </p>
             <div className="flex justify-center">
               <a
-                href={WHATSAPP_LINK}
+                href={getWhatsAppLink("Sobre", "Botão CTA Final")}
                 target="_blank"
                 className="group h-16 min-w-[260px] flex items-center justify-center px-10 bg-brand-whatsapp text-white rounded-2xl font-bold text-base btn-interact shadow-2xl shadow-brand-whatsapp/30 whitespace-nowrap"
               >

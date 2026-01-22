@@ -87,10 +87,12 @@ const ServicesPage: React.FC = () => {
                     Falar com o departamento comercial
                   </a>
                 </div>
-                <div className="lg:col-span-4 hidden lg:block">
-                  <div className="w-48 h-48 border border-white/10 rounded-full flex items-center justify-center animate-spin-slow">
-                    <div className="w-40 h-40 border border-white/5 rounded-full flex items-center justify-center">
-                      <span className="text-white/20 font-black text-4xl italic">C</span>
+                <div className="lg:col-span-4 hidden lg:flex justify-end pr-10">
+                  <div className="w-56 h-56 relative flex items-center justify-center">
+                    <div className="absolute inset-0 border border-white/10 rounded-full animate-spin-slow"></div>
+                    <div className="absolute inset-4 border border-white/5 rounded-full"></div>
+                    <div className="w-40 h-40 bg-white/5 backdrop-blur-3xl rounded-full border border-white/10 flex items-center justify-center shadow-2xl">
+                      <span className="text-white/30 font-black text-6xl tracking-tighter ml-[-2px]">C</span>
                     </div>
                   </div>
                 </div>

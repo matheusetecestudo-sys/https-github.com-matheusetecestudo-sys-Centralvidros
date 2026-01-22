@@ -24,7 +24,7 @@ const Process: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 md:py-24 bg-slate-950 relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-slate-950 relative overflow-hidden">
       <div className="container-precision relative z-10">
         <header className="mb-16 reveal active">
           <div className="flex items-center gap-3 mb-6">

@@ -5,7 +5,7 @@ const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-12 md:py-16 bg-slate-50 font-inter">
+    <section className="py-8 md:py-10 bg-slate-50 font-inter">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12 reveal active">
           <div className="flex items-center justify-center gap-3 mb-6">

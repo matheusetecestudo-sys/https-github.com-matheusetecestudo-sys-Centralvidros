@@ -3,7 +3,7 @@ import { WHATSAPP_LINK, CTA_TEXT } from '../constants';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 bg-slate-50 overflow-hidden">
+    <section className="relative pt-16 pb-8 md:pt-24 md:pb-16 bg-slate-50 overflow-hidden">
       {/* Elementos Decorativos de Fundo */}
       <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[120%] bg-white skew-x-[-12deg] z-0 pointer-events-none hidden md:block" />
 

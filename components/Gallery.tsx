@@ -5,7 +5,7 @@ const Gallery: React.FC = () => {
   const galleryServices = ALL_SERVICES;
 
   return (
-    <section id="solucoes" className="py-12 pb-24 md:py-16 bg-white font-inter">
+    <section id="solucoes" className="py-8 pb-16 md:py-10 bg-white font-inter">
       <div className="container-precision">
         <div className="text-center mb-8 reveal active">
           <div className="flex items-center justify-center gap-3 mb-6">

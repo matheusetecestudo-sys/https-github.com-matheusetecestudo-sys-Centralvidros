@@ -10,7 +10,7 @@ const Trust: React.FC = () => {
   ];
 
   return (
-    <section id="sobre" className="py-16 md:py-20 bg-white relative font-inter">
+    <section id="sobre" className="py-10 md:py-12 bg-white relative font-inter">
       <div className="container-precision">
         <div className="bg-slate-950 rounded-3xl p-6 lg:p-16 overflow-hidden relative reveal active shadow-2xl">
           <div className="absolute top-0 right-0 w-[40%] h-full bg-brand-accent/5 skew-x-[-15deg] pointer-events-none" />

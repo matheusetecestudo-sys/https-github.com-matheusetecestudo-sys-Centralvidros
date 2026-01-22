@@ -3,10 +3,10 @@ import { FEATURED_SERVICES, getServiceWhatsAppLink } from '../constants';
 
 const Services: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigate }) => {
   return (
-    <section id="servicos" className="py-16 pb-24 md:py-20 bg-white relative overflow-hidden">
+    <section id="servicos" className="py-10 pb-16 md:py-12 bg-white relative overflow-hidden">
       <div className="container-precision">
 
-        <div className="grid lg:grid-cols-12 gap-12 mb-12 reveal active items-end">
+        <div className="grid lg:grid-cols-12 gap-8 mb-8 reveal active items-end">
           <div className="lg:col-span-8">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-10 h-[1px] bg-brand-accent"></span>

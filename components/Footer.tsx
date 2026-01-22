@@ -10,7 +10,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const mainServices = ALL_SERVICES.slice(0, 5);
 
   return (
-    <footer className="bg-slate-950 text-slate-400 pt-16 pb-32 md:pb-12 border-t border-white/5 font-inter">
+    <footer className="bg-slate-950 text-slate-400 pt-12 pb-32 md:pb-12 border-t border-white/5 font-inter">
       <div className="container-precision">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20 text-center md:text-left">
 

@@ -44,6 +44,7 @@ const Services: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigat
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                   loading="lazy"
                 />
+                <div className="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-md px-5 py-2 rounded-full text-[10px] font-bold text-slate-900 uppercase tracking-widest shadow-sm">
                   {service.tag || 'Destaque'}
                 </div>

@@ -3,7 +3,7 @@ import { WHATSAPP_LINK, CTA_TEXT } from '../constants';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-16 pb-8 md:pt-24 md:pb-16 bg-slate-50 overflow-hidden">
+    <section className="relative pt-24 pb-10 md:pt-32 md:pb-20 bg-slate-50 overflow-hidden">
       {/* Elementos Decorativos de Fundo */}
       <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[120%] bg-white skew-x-[-12deg] z-0 pointer-events-none hidden md:block" />
 
@@ -11,15 +11,15 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-12 gap-16 md:gap-24 items-center">
 
           <div className="lg:col-span-12 reveal active text-center flex flex-col items-center">
-            <div className="flex items-center justify-center gap-4 mb-10 overflow-hidden">
-              <span className="w-12 h-[2px] bg-brand-accent rounded-full"></span>
-              <span className="text-[9px] md:text-[11px] font-black text-brand-accent uppercase tracking-[0.5em] whitespace-nowrap">Vidraçaria Técnica Especializada</span>
-              <span className="w-12 h-[2px] bg-brand-accent rounded-full"></span>
+            <div className="flex items-center justify-center gap-2 md:gap-4 mb-8 overflow-hidden">
+              <span className="w-8 h-[2px] bg-brand-accent rounded-full"></span>
+              <span className="text-[8px] md:text-[11px] font-black text-brand-accent uppercase tracking-[0.2em] md:tracking-[0.5em] whitespace-nowrap">Vidraçaria Técnica Especializada</span>
+              <span className="w-8 h-[2px] bg-brand-accent rounded-full"></span>
             </div>
 
-            <h1 className="text-4xl md:text-7xl lg:text-[92px] font-black text-slate-900 leading-[0.95] md:leading-[0.85] mb-12 tracking-tight">
+            <h1 className="text-3xl md:text-7xl lg:text-[92px] font-black text-slate-900 leading-[1.1] md:leading-[0.85] mb-8 tracking-tight">
               A Engenharia do <br className="hidden md:block" />
-              <span className="text-slate-400 font-medium">Vidro Moderno.</span>
+              <span className="text-slate-400 font-medium whitespace-nowrap">Vidro Moderno.</span>
             </h1>
 
             <p className="text-lg md:text-2xl text-slate-500 font-medium leading-relaxed max-w-2xl mb-16 lg:mx-auto">

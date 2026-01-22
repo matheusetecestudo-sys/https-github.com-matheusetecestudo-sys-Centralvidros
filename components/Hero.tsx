@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
               Projetos sob medida em vidros e espelhos com instalação técnica imediata e acabamento padrão arquitetura de alto luxo.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 md:gap-10">
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-8 md:gap-10">
               <a
                 href={WHATSAPP_LINK}
                 target="_blank"

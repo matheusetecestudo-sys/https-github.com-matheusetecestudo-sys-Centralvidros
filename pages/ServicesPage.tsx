@@ -68,7 +68,7 @@ const ServicesPage: React.FC = () => {
               <div className="absolute top-0 right-0 w-[40%] h-full bg-brand-accent/5 skew-x-[-15deg] pointer-events-none" />
 
               <div className="relative z-10 grid lg:grid-cols-12 gap-16 items-center">
-                <div className="lg:col-span-8">
+                <div className="lg:col-span-8 flex flex-col items-center sm:items-start text-center sm:text-left">
                   <div className="flex items-center gap-4 mb-8">
                     <span className="w-10 h-[2px] bg-brand-accent"></span>
                     <span className="text-[10px] font-bold text-brand-accent uppercase tracking-widest">Divisão Corporativa</span>
@@ -79,7 +79,10 @@ const ServicesPage: React.FC = () => {
                   <p className="text-slate-400 font-medium text-lg md:text-xl mb-12 leading-relaxed max-w-xl">
                     Atendemos construtoras, escritórios e condomínios com logística própria e preços competitivos de fábrica.
                   </p>
-                    className="h-14 flex items-center justify-center px-8 sm:px-12 bg-white text-slate-900 rounded-xl font-bold text-[11px] sm:text-sm btn-interact shadow-xl inline-flex sm:w-auto whitespace-nowrap"
+                  <a
+                    href={getServiceWhatsAppLink("Projetos Corporativos")}
+                    target="_blank"
+                    className="h-14 w-full sm:w-auto flex items-center justify-center px-8 sm:px-12 bg-white text-slate-900 rounded-xl font-bold text-[11px] sm:text-sm btn-interact shadow-xl whitespace-nowrap"
                   >
                     Falar com o departamento comercial
                   </a>
@@ -96,7 +99,7 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
       </main>
-    </div>
+    </div >
   );
 };
 

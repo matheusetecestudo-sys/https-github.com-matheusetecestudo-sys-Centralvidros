@@ -16,13 +16,14 @@ export const CLIENT_CONFIG = {
  * @param detail - Detalhe específico (ex: nome do serviço ou botão)
  */
 export const getWhatsAppLink = (origin: string, detail: string = "") => {
-  const isSpecificService = detail && !detail.toLowerCase().includes("botão") && !detail.toLowerCase().includes("geral") && !detail.toLowerCase().includes("menu");
+  const isGeneric = !detail ||
+    /botão|geral|menu|imediato|rápido|especialista/i.test(detail);
 
-  const msg = isSpecificService
-    ? `Olá! Gostaria de solicitar um orçamento para *${detail}*.\n\nVim pelo site e aguardo o retorno.`
-    : `Olá! Gostaria de solicitar um orçamento.\n\nVim pelo site e aguardo o retorno.`;
+  const message = isGeneric
+    ? "Olá! Gostaria de solicitar um orçamento. Vim pelo site e aguardo o retorno."
+    : `Olá! Gostaria de solicitar um orçamento para *${detail}*. Vim pelo site e aguardo o retorno.`;
 
-  return `https://wa.me/${CLIENT_CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+  return `https://wa.me/${CLIENT_CONFIG.whatsapp}?text=${encodeURIComponent(message)}`;
 };
 
 export const WHATSAPP_LINK = getWhatsAppLink("Site", "Geral");

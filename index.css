@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-primary: #064e3b;
+  --brand-accent: #059669;
+  --brand-whatsapp: #16a34a;
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(5, 150, 105, 0.1);
+  --transition-main: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  --space-unit: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+body {
+  @apply font-inter bg-white text-neutral-main antialiased leading-relaxed overflow-x-hidden;
+}
+
+.container-precision {
+  @apply w-full max-w-[1280px] mx-auto px-[clamp(16px,5vw,64px)];
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .grid-12 {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-12 {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 600ms var(--transition-main), transform 600ms var(--transition-main);
+  will-change: transform, opacity;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-interact {
+  position: relative;
+  transition: all var(--transition-main);
+  transform-origin: center;
+  outline: 2px solid transparent;
+  outline-offset: 4px;
+}
+
+.btn-interact:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+.btn-interact:active {
+  transform: scale(0.98);
+  filter: brightness(0.9);
+}
+
+.btn-interact:focus-visible {
+  outline-color: var(--brand-accent);
+}
+
+.btn-interact:disabled {
+  opacity: 0.5;
+  @apply cursor-not-allowed transform-none;
+}
+
+h1, h2, h3 {
+  @apply leading-[1.15] tracking-tight font-black text-brand-secondary;
+}
+
+p {
+  @apply text-neutral-text;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+#app-loader {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #f1f5f9;
+  border-top: 2px solid var(--brand-accent);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

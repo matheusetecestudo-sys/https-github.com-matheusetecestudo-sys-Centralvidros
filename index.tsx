@@ -1,13 +1,14 @@
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import './index.css';
 import App from './App.tsx';
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
   const root = createRoot(rootElement);
   root.render(<App />);
-  
+
   // Remove loader com transição suave de engenharia
   window.addEventListener('load', () => {
     const loader = document.getElementById('app-loader');

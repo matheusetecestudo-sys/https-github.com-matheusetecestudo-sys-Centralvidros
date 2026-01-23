@@ -1,5 +1,6 @@
 import React from 'react';
-import { getWhatsAppLink, WHATSAPP_LINK, CTA_TEXT } from '../constants';
+import { getWhatsAppLink } from '../constants';
+import { MessageSquare, Ruler, CheckCircle } from 'lucide-react';
 
 const Process: React.FC = () => {
   const steps = [
@@ -7,19 +8,19 @@ const Process: React.FC = () => {
       num: "01",
       title: "Consultoria",
       desc: "Entendimento total das necessidades estéticas e técnicas do seu projeto.",
-      icon: "message-square"
+      icon: <MessageSquare className="w-6 h-6" />
     },
     {
       num: "02",
       title: "Logística",
       desc: "Medição técnica a laser e agendamento imediato da produção.",
-      icon: "ruler"
+      icon: <Ruler className="w-6 h-6" />
     },
     {
       num: "03",
       title: "Instalação",
       desc: "Execução limpa e segura com equipe própria e certificada.",
-      icon: "check-circle"
+      icon: <CheckCircle className="w-6 h-6" />
     }
   ];
 
@@ -29,7 +30,7 @@ const Process: React.FC = () => {
         <header className="mb-16 reveal active">
           <div className="flex items-center gap-3 mb-6">
             <span className="w-10 h-[1px] bg-brand-accent"></span>
-            <span className="text-[10px] font-bold text-brand-accent uppercase tracking-widest">Metodologia Cristal Glass</span>
+            <span className="text-[10px] font-bold text-brand-accent uppercase tracking-widest text-[clamp(8px,2vw,10px)]">Metodologia Cristal Glass</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-[1] mb-8">
             Do Projeto à <br />
@@ -48,6 +49,9 @@ const Process: React.FC = () => {
                   {step.num}
                 </span>
                 <div className="h-[1px] flex-1 bg-white/10 group-hover:bg-brand-accent/40 transition-all duration-500"></div>
+                <div className="text-brand-accent transform group-hover:scale-110 transition-transform">
+                  {step.icon}
+                </div>
               </div>
               <h3 className="text-lg font-bold text-white mb-6 uppercase tracking-widest leading-tight">{step.title}</h3>
               <p className="text-slate-500 leading-relaxed text-base font-medium">

@@ -1,35 +1,38 @@
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, Suspense, lazy } from 'react';
 import Navbar from './components/Navbar.tsx';
-import Hero from './components/Hero.tsx';
-import Services from './components/Services.tsx';
-import Process from './components/Process.tsx';
-import Gallery from './components/Gallery.tsx';
-import Trust from './components/Trust.tsx';
-import Testimonials from './components/Testimonials.tsx';
-import FAQ from './components/FAQ.tsx';
 import Footer from './components/Footer.tsx';
 import WhatsAppButton from './components/WhatsAppButton.tsx';
-import ServicesPage from './pages/ServicesPage.tsx';
-import ContactPage from './pages/ContactPage.tsx';
-import AboutPage from './pages/AboutPage.tsx';
+
+// Lazy loading for pages to improve initial load time (LCP)
+const Hero = lazy(() => import('./components/Hero.tsx'));
+const Services = lazy(() => import('./components/Services.tsx'));
+const Process = lazy(() => import('./components/Process.tsx'));
+const Gallery = lazy(() => import('./components/Gallery.tsx'));
+const Trust = lazy(() => import('./components/Trust.tsx'));
+const Testimonials = lazy(() => import('./components/Testimonials.tsx'));
+const FAQ = lazy(() => import('./components/FAQ.tsx'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage.tsx'));
+const ContactPage = lazy(() => import('./pages/ContactPage.tsx'));
+const AboutPage = lazy(() => import('./pages/AboutPage.tsx'));
+
+// Simple loading placeholder for Suspense
+const SectionLoader = () => (
+  <div className="w-full h-32 flex items-center justify-center">
+    <div className="w-6 h-6 border-2 border-brand-accent/30 border-t-brand-accent rounded-full animate-spin"></div>
+  </div>
+);
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [isNavigating, setIsNavigating] = useState(false);
-
-  const initLucide = useCallback(() => {
-    if ((window as any).lucide) {
-      (window as any).lucide.createIcons();
-    }
-  }, []);
 
   const initObserver = useCallback(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          observer.unobserve(entry.target); // Melhora performance: para de observar após animar
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
@@ -47,7 +50,6 @@ function App() {
         requestAnimationFrame(() => {
           setCurrentPage(hash);
           window.scrollTo({ top: 0, behavior: 'instant' });
-          // Reduzimos o timeout para 200ms para casar com a variável de transição CSS
           setTimeout(() => setIsNavigating(false), 200);
         });
       }
@@ -61,11 +63,10 @@ function App() {
   // Re-init recursos visuais
   useEffect(() => {
     if (!isNavigating) {
-      initLucide();
       const cleanup = initObserver();
       return cleanup;
     }
-  }, [currentPage, isNavigating, initLucide, initObserver]);
+  }, [currentPage, isNavigating, initObserver]);
 
   const navigate = (page: string) => {
     if (page === currentPage) return;
@@ -73,12 +74,12 @@ function App() {
   };
 
   const pageContent = useMemo(() => {
-    switch (currentPage) {
-      case 'servicos': return <ServicesPage />;
-      case 'contato': return <ContactPage />;
-      case 'sobre': return <AboutPage />;
-      default:
-        return (
+    return (
+      <Suspense fallback={<SectionLoader />}>
+        {currentPage === 'servicos' && <ServicesPage />}
+        {currentPage === 'contato' && <ContactPage />}
+        {currentPage === 'sobre' && <AboutPage />}
+        {currentPage === 'home' && (
           <div className="flex flex-col">
             <Hero />
             <Services onNavigate={navigate} />
@@ -88,8 +89,9 @@ function App() {
             <Trust />
             <Testimonials />
           </div>
-        );
-    }
+        )}
+      </Suspense>
+    );
   }, [currentPage]);
 
   return (

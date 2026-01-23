@@ -43,6 +43,7 @@ const Services: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigat
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-md px-5 py-2 rounded-full text-[10px] font-bold text-slate-900 uppercase tracking-widest shadow-sm">
@@ -77,13 +78,13 @@ const Services: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigat
           <div className="inline-flex items-center gap-6 px-10 h-16 bg-slate-900 text-white rounded-2xl shadow-2xl">
             <div className="flex -space-x-3">
               {[
-                "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=128&h=128&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=128&h=128&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=128&h=128&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=128&h=128&auto=format&fit=crop"
+                "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=128&h=128&auto=format&fit=crop&fm=webp",
+                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=128&h=128&auto=format&fit=crop&fm=webp",
+                "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=128&h=128&auto=format&fit=crop&fm=webp",
+                "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=128&h=128&auto=format&fit=crop&fm=webp"
               ].map((url, i) => (
                 <div key={i} className="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-800 overflow-hidden">
-                  <img src={url} alt="Técnico Certificado" className="w-full h-full object-cover opacity-80" />
+                  <img src={url} alt="Técnico Certificado" className="w-full h-full object-cover opacity-80" decoding="async" loading="lazy" />
                 </div>
               ))}
             </div>

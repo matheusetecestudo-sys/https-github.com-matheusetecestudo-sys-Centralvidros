@@ -34,6 +34,7 @@ const Gallery: React.FC = () => {
                 alt={service.title}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-950/20 opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
 

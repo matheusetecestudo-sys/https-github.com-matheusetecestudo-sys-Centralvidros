@@ -39,12 +39,12 @@ const Hero: React.FC = () => {
               <div className="flex items-center gap-6">
                 <div className="flex -space-x-4">
                   {[
-                    "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=128&h=128&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=128&h=128&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=128&h=128&auto=format&fit=crop"
+                    "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=128&h=128&auto=format&fit=crop&fm=webp",
+                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=128&h=128&auto=format&fit=crop&fm=webp",
+                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=128&h=128&auto=format&fit=crop&fm=webp"
                   ].map((url, i) => (
                     <div key={i} className="w-12 h-12 md:w-14 md:h-14 rounded-full border-[6px] border-white bg-slate-100 flex items-center justify-center overflow-hidden shadow-sm relative z-[30]">
-                      <img src={url} alt={`Cliente ${i + 1}`} className="w-full h-full object-cover" />
+                      <img src={url} alt={`Cliente ${i + 1}`} className="w-full h-full object-cover" decoding="async" />
                     </div>
                   ))}
                 </div>

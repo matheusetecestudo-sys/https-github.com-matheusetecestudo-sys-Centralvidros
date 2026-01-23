@@ -5,220 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Cristal Glass | Alta Engenharia em Vidros</title>
-
+    
+    <!-- SEO & Performance -->
+    <meta name="description" content="Especialista em vidros temperados, laminados, espelhos e projetos de engenharia em vidro. Atendimento rápido e acabamento premium.">
+    <link rel="canonical" href="https://centralvidros.com.br" />
+    
+    <!-- Preconnect & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            primary: '#065f46',   /* Emerald 800 - Autoridade */
-                            secondary: '#064e3b', /* Emerald 950 - Texto */
-                            accent: '#10b981',    /* Emerald 500 - Ativação */
-                            whatsapp: '#16a34a',  /* Green 600 - Acessível */
-                            light: '#f0fdf4',     /* Emerald 50 - Fundo */
-                        },
-                        neutral: {
-                            main: '#020617',      /* Slate 950 - Contraste AAA */
-                            text: '#334155',      /* Slate 700 - Secundário AA */
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        :root {
-            --brand-primary: #064e3b;
-            --brand-accent: #059669;
-            --brand-whatsapp: #16a34a;
-            --glass-bg: rgba(255, 255, 255, 0.8);
-            --glass-border: rgba(5, 150, 105, 0.1);
-            --transition-main: 200ms cubic-bezier(0.16, 1, 0.3, 1);
-            --space-unit: 8px;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        section {
-            scroll-margin-top: 80px;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
-            color: #020617;
-            margin: 0;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            line-height: 1.6;
-        }
-
-        .container-precision {
-            width: 100%;
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 clamp(16px, 5vw, 64px);
-        }
-
-        .grid-12 {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        @media (min-width: 768px) {
-            .grid-12 {
-                grid-template-columns: repeat(8, 1fr);
-                gap: 32px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .grid-12 {
-                grid-template-columns: repeat(12, 1fr);
-                gap: 40px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .reveal {
-                transition: none !important;
-                opacity: 1 !important;
-                transform: none !important;
-            }
-
-            * {
-                transition: none !important;
-                animation: none !important;
-            }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(12px);
-            transition: opacity 600ms var(--transition-main), transform 600ms var(--transition-main);
-            will-change: transform, opacity;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .btn-interact {
-            position: relative;
-            transition: all var(--transition-main);
-            transform-origin: center;
-            outline: 2px solid transparent;
-            outline-offset: 4px;
-        }
-
-        .btn-interact:hover {
-            transform: scale(1.02);
-            filter: brightness(1.1);
-        }
-
-        .btn-interact:active {
-            transform: scale(0.98);
-            filter: brightness(0.9);
-        }
-
-        .btn-interact:focus-visible {
-            outline-color: var(--brand-accent);
-        }
-
-        .btn-interact:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        h1,
-        h2,
-        h3 {
-            line-height: 1.15;
-            letter-spacing: -0.025em;
-            font-weight: 900;
-            color: #064e3b;
-        }
-
-        p {
-            color: #334155;
-        }
-
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #fff;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #10b981;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #059669;
-        }
-
-        #app-loader {
-            position: fixed;
-            inset: 0;
-            background: #fff;
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .spinner {
-            width: 24px;
-            height: 24px;
-            border: 2px solid #f1f5f9;
-            border-top: 2px solid var(--brand-accent);
-            border-radius: 50%;
-            animation: spin 0.6s linear infinite;
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-
-    <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@19.0.0",
-    "react-dom": "https://esm.sh/react-dom@19.0.0",
-    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
-    "@google/genai": "https://esm.sh/@google/genai@1.35.0",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
-  }
-}
-</script>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/index.css">
 </head>
 
 <body>
-    <div id="app-loader">
+    <div id="app-loader" aria-hidden="true">
         <div class="spinner"></div>
     </div>
     <div id="root"></div>
-    <script type="module" src="index.tsx"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="/index.tsx"></script>
 </body>
 
 </html>

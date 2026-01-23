@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               D
             </div>
             <div className="flex flex-col items-start leading-tight">
-              <span className="text-sm md:text-base font-black tracking-tighter text-slate-900 uppercase">Duno</span>
+              <span className="text-sm md:text-base font-black tracking-tighter text-slate-900 uppercase">Duno ✅</span>
               <span className="text-[8px] md:text-[9px] font-bold text-slate-400 uppercase tracking-widest">Vidraçaria Técnica</span>
             </div>
           </button>

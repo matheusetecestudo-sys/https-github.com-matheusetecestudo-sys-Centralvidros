@@ -4,7 +4,7 @@ export const CLIENT_CONFIG = {
   neighborhoods: "Atendimento rápido em toda a cidade",
   whatsapp: "5511992876219",
   phoneDisplay: "(11) 99287-6219",
-  email: "contato@cristalglass.com.br",
+  email: "contato@duno.com.br",
   address: "Atendimento em domicílio e Showroom",
   openingHours: "Seg-Sex: 08:00 às 18:00 | Sáb: 08:00 às 13:00",
   message: "Olá! Gostaria de pedir um orçamento pelo WhatsApp."

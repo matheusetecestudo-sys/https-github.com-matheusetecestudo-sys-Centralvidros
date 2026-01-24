@@ -85,7 +85,6 @@ function App() {
         {currentPage === 'home' && (
           <div className="flex flex-col">
             <Hero />
-            <Partners />
             <Services onNavigate={navigate} />
             <HowItWorks />
             <Process />
@@ -93,6 +92,7 @@ function App() {
             <FAQ />
             <Differentiators />
             <Trust />
+            <Partners />
             <Testimonials />
           </div>
         )}

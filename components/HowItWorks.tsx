@@ -7,7 +7,13 @@ const HowItWorks: React.FC = () => {
             title: "Meça o local",
             description: "Tire as medidas aproximadas (largura e altura). Não precisa ser exato, nossa equipe fará a conferência técnica final.",
             icon: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m14.5 12.5 2-2" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m11.5 9.5 2-2" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m8.5 6.5 2-2" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m5.5 3.5 2-2" />
+                </svg>
             )
         },
         {

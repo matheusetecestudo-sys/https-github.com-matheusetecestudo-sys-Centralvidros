@@ -23,21 +23,21 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <span className="text-2xl font-black text-white tracking-tighter leading-none">Duno</span>
               <span className="text-brand-accent font-bold text-[10px] tracking-[0.3em] uppercase">Engenharia do vidro</span>
             </button>
-            <p className="text-base leading-relaxed max-w-xs text-slate-300 mx-auto md:mx-0">
+            <p className="text-base leading-relaxed max-w-xs !text-slate-200 mx-auto md:mx-0 font-medium">
               Especialistas em engenharia vidreira de alto desempenho. Precisão técnica em box, espelhos e projetos sob medida em {CLIENT_CONFIG.city}.
             </p>
           </div>
 
           {/* Coluna 2: Serviços Principais */}
           <div className="space-y-8">
-            <h4 className="text-white font-bold text-sm tracking-tight">Nossas especialidades</h4>
+            <h4 className="!text-white font-bold text-sm tracking-tight">Nossas especialidades</h4>
             <ul className="space-y-4">
               {mainServices.map((s) => (
                 <li key={s.id}>
                   <a
                     href={getServiceWhatsAppLink(s.title)}
                     target="_blank"
-                    className="text-base hover:text-brand-accent transition-colors font-medium opacity-70 hover:opacity-100"
+                    className="text-base hover:text-brand-accent transition-colors font-medium !text-slate-200 hover:!text-white opacity-100"
                   >
                     {s.title}
                   </a>
@@ -48,21 +48,21 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
           {/* Coluna 3: Institucional */}
           <div className="space-y-8">
-            <h4 className="text-white font-bold text-sm tracking-tight">Empresa</h4>
+            <h4 className="!text-white font-bold text-sm tracking-tight">Empresa</h4>
             <ul className="space-y-4">
-              <li><button onClick={() => onNavigate?.('sobre')} className="text-base hover:text-brand-accent transition-colors text-left font-medium !text-slate-300 opacity-100 hover:opacity-100">Nossa história</button></li>
-              <li><button onClick={() => onNavigate?.('servicos')} className="text-base hover:text-brand-accent transition-colors text-left font-medium !text-slate-300 opacity-100 hover:opacity-100">Catálogo de serviços</button></li>
-              <li><button onClick={() => onNavigate?.('contato')} className="text-base hover:text-brand-accent transition-colors text-left font-medium !text-slate-300 opacity-100 hover:opacity-100">Fale com um técnico</button></li>
+              <li><button onClick={() => onNavigate?.('sobre')} className="text-base hover:text-brand-accent transition-colors text-left font-medium !text-slate-200 hover:!text-white opacity-100">Nossa história</button></li>
+              <li><button onClick={() => onNavigate?.('servicos')} className="text-base hover:text-brand-accent transition-colors text-left font-medium !text-slate-200 hover:!text-white opacity-100">Catálogo de serviços</button></li>
+              <li><button onClick={() => onNavigate?.('contato')} className="text-base hover:text-brand-accent transition-colors text-left font-medium !text-slate-200 hover:!text-white opacity-100">Fale com um técnico</button></li>
             </ul>
           </div>
 
           {/* Coluna 4: Contato Rápido */}
           <div className="space-y-8">
-            <h4 className="text-white font-bold text-sm tracking-tight">Atendimento comercial</h4>
+            <h4 className="!text-white font-bold text-sm tracking-tight">Atendimento comercial</h4>
             <div className="space-y-6">
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold !text-slate-300 mb-1 tracking-widest">Telefone</span>
-                <span className="text-white font-black text-xl">{CLIENT_CONFIG.phoneDisplay}</span>
+                <span className="text-[10px] uppercase font-bold !text-slate-400 mb-1 tracking-widest">Telefone</span>
+                <span className="!text-white font-black text-xl">{CLIENT_CONFIG.phoneDisplay}</span>
               </div>
               <div className="flex justify-center md:justify-start">
                 <a

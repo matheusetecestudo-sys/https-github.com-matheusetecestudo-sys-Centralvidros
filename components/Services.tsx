@@ -92,7 +92,7 @@ const Services: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigat
                 </div>
               ))}
             </div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white">Equipe técnica própria certificada pela ABNT.</p>
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] !text-white">Equipe técnica própria certificada pela ABNT.</p>
           </div>
         </div>
 

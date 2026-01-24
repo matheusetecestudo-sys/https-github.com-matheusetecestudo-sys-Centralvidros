@@ -27,16 +27,17 @@ const Process: React.FC = () => {
   return (
     <section className="py-12 md:py-16 bg-slate-950 relative overflow-hidden">
       <div className="container-precision relative z-10">
-        <header className="mb-16 reveal active">
-          <div className="flex items-center gap-3 mb-6">
+        <header className="mb-16 reveal active text-center">
+          <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-10 h-[1px] bg-brand-accent"></span>
             <span className="text-[10px] font-bold text-brand-accent uppercase tracking-widest text-[clamp(8px,2vw,10px)]">Metodologia Duno</span>
+            <span className="w-10 h-[1px] bg-brand-accent"></span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-[1] mb-8">
+          <h2 className="text-4xl md:text-6xl font-black !text-brand-accent tracking-tight leading-[1] mb-8">
             Do Projeto à <br />
-            <span className="text-slate-500 italic">Entrega Final.</span>
+            <span className="!text-brand-accent opacity-80 italic">Entrega Final.</span>
           </h2>
-          <p className="!text-slate-200 max-w-lg font-medium text-lg leading-relaxed">
+          <p className="!text-slate-200 max-w-lg font-medium text-lg leading-relaxed mx-auto">
             Eficiência técnica para garantir que seu projeto seja executado sem erros e com acabamento impecável.
           </p>
         </header>

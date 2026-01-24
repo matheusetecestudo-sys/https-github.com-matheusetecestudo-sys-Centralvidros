@@ -34,7 +34,7 @@ const ContactPage: React.FC = () => {
               <div className="bg-slate-950 rounded-3xl p-6 md:p-16 text-white relative overflow-hidden shadow-2xl">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-brand-accent/10 rounded-full blur-[100px] pointer-events-none" />
 
-                <h2 className="text-xl md:text-3xl font-black mb-10 tracking-tight leading-none italic">Atendimento Imediato.</h2>
+                <h2 className="text-xl md:text-3xl font-black mb-10 tracking-tight leading-none italic text-center !text-brand-accent">Atendimento Imediato.</h2>
 
                 <div className="space-y-12 mb-12">
                   <a

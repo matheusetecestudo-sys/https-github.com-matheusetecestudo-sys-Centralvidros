@@ -16,15 +16,16 @@ const Trust: React.FC = () => {
           <div className="absolute top-0 right-0 w-[40%] h-full bg-brand-accent/5 skew-x-[-15deg] pointer-events-none" />
 
           <div className="relative z-10 grid lg:grid-cols-12 gap-16 items-center">
-            <div className="lg:col-span-7">
-              <div className="flex items-center gap-4 mb-8">
+            <div className="lg:col-span-7 text-center lg:text-center flex flex-col items-center">
+              <div className="flex items-center justify-center gap-4 mb-8">
                 <span className="w-10 h-[2px] bg-brand-accent"></span>
                 <span className="text-[10px] font-bold text-brand-accent uppercase tracking-[0.3em]">Credibilidade Técnica</span>
+                <span className="w-10 h-[2px] bg-brand-accent"></span>
               </div>
-              <h2 className="text-4xl md:text-7xl font-black !text-white mb-10 leading-[1] tracking-tight">
-                O Padrão <br /> <span className="!text-slate-200 italic">de Excelência.</span>
+              <h2 className="text-4xl md:text-7xl font-black !text-brand-accent mb-10 leading-[1] tracking-tight">
+                O Padrão <br /> <span className="!text-brand-accent opacity-80 italic">de Excelência.</span>
               </h2>
-              <p className="!text-slate-200 font-medium text-lg md:text-xl mb-12 leading-relaxed max-w-lg">
+              <p className="!text-slate-200 font-medium text-lg md:text-xl mb-12 leading-relaxed max-w-lg mx-auto">
                 Projetos que exigem rigor técnico e acabamento de alto luxo. Unimos o preço direto de usina à precisão de engenharia.
               </p>
 

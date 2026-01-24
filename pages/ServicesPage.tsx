@@ -72,15 +72,16 @@ const ServicesPage: React.FC = () => {
               <div className="absolute top-0 right-0 w-[40%] h-full bg-brand-accent/5 skew-x-[-15deg] pointer-events-none" />
 
               <div className="relative z-10 grid lg:grid-cols-12 gap-16 items-center">
-                <div className="lg:col-span-8 flex flex-col items-start sm:items-start text-left sm:text-left">
-                  <div className="flex items-center gap-4 mb-8">
+                <div className="lg:col-span-8 flex flex-col items-center text-center">
+                  <div className="flex items-center justify-center gap-4 mb-8">
                     <span className="w-10 h-[2px] bg-brand-accent"></span>
                     <span className="text-[10px] font-bold text-brand-accent uppercase tracking-widest">Divisão Corporativa</span>
+                    <span className="w-10 h-[2px] bg-brand-accent"></span>
                   </div>
-                  <h2 className="text-3xl md:text-6xl font-black !text-white mb-8 leading-[1] tracking-tight">
-                    Projetos em <br /> <span className="!text-slate-200 italic">Alta Escala.</span>
+                  <h2 className="text-3xl md:text-6xl font-black !text-brand-accent mb-8 leading-[1] tracking-tight">
+                    Projetos em <br /> <span className="!text-brand-accent opacity-80 italic">Alta Escala.</span>
                   </h2>
-                  <p className="!text-slate-200 font-medium text-lg md:text-xl mb-12 leading-relaxed max-w-xl">
+                  <p className="!text-slate-200 font-medium text-lg md:text-xl mb-12 leading-relaxed max-w-xl mx-auto">
                     Atendemos construtoras, escritórios e condomínios com logística própria e preços competitivos de fábrica.
                   </p>
                   <a

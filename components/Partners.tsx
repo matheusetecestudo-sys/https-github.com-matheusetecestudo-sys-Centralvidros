@@ -28,10 +28,10 @@ const Partners: React.FC = () => {
                     <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-950 to-transparent z-20 pointer-events-none" />
 
                     <div className="flex overflow-hidden select-none">
-                        <div className="flex flex-nowrap gap-12 md:gap-24 items-center animate-scroll py-4">
+                        <div className="flex flex-nowrap gap-12 md:gap-24 items-center animate-scroll py-8">
                             {[...brands, ...brands].map((brand, i) => (
                                 <div key={i} className="flex-shrink-0">
-                                    <span className="text-2xl md:text-5xl font-black text-slate-700/50 hover:text-brand-accent transition-all duration-500 cursor-default whitespace-nowrap tracking-tighter hover:scale-110 block transform translate-z-0">
+                                    <span className="text-3xl md:text-6xl font-black text-white hover:text-brand-accent transition-all duration-500 cursor-default whitespace-nowrap tracking-tighter hover:scale-110 block transform translate-z-0 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.6)]">
                                         {brand}
                                     </span>
                                 </div>

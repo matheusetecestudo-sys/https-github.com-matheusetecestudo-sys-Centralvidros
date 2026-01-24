@@ -36,7 +36,7 @@ const Process: React.FC = () => {
             Do Projeto à <br />
             <span className="text-slate-500 italic">Entrega Final.</span>
           </h2>
-          <p className="text-slate-400 max-w-lg font-medium text-lg leading-relaxed">
+          <p className="!text-slate-200 max-w-lg font-medium text-lg leading-relaxed">
             Eficiência técnica para garantir que seu projeto seja executado sem erros e com acabamento impecável.
           </p>
         </header>

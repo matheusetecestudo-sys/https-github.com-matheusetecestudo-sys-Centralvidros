@@ -50,9 +50,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="space-y-8">
             <h4 className="text-white font-bold text-sm tracking-tight">Empresa</h4>
             <ul className="space-y-4">
-              <li><button onClick={() => onNavigate?.('sobre')} className="text-base hover:text-brand-accent transition-colors text-left font-medium opacity-70 hover:opacity-100">Nossa história</button></li>
-              <li><button onClick={() => onNavigate?.('servicos')} className="text-base hover:text-brand-accent transition-colors text-left font-medium opacity-70 hover:opacity-100">Catálogo de serviços</button></li>
-              <li><button onClick={() => onNavigate?.('contato')} className="text-base hover:text-brand-accent transition-colors text-left font-medium opacity-70 hover:opacity-100">Fale com um técnico</button></li>
+              <li><button onClick={() => onNavigate?.('sobre')} className="text-base hover:text-brand-accent transition-colors text-left font-medium !text-slate-300 opacity-100 hover:opacity-100">Nossa história</button></li>
+              <li><button onClick={() => onNavigate?.('servicos')} className="text-base hover:text-brand-accent transition-colors text-left font-medium !text-slate-300 opacity-100 hover:opacity-100">Catálogo de serviços</button></li>
+              <li><button onClick={() => onNavigate?.('contato')} className="text-base hover:text-brand-accent transition-colors text-left font-medium !text-slate-300 opacity-100 hover:opacity-100">Fale com um técnico</button></li>
             </ul>
           </div>
 
@@ -61,7 +61,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h4 className="text-white font-bold text-sm tracking-tight">Atendimento comercial</h4>
             <div className="space-y-6">
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold text-slate-600 mb-1 tracking-widest">Telefone</span>
+                <span className="text-[10px] uppercase font-bold !text-slate-300 mb-1 tracking-widest">Telefone</span>
                 <span className="text-white font-black text-xl">{CLIENT_CONFIG.phoneDisplay}</span>
               </div>
               <div className="flex justify-center md:justify-start">
@@ -84,7 +84,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <p className="text-[11px] font-medium text-slate-600">
+          <p className="text-[11px] font-medium !text-slate-400">
             © {currentYear} Duno — Engenharia de vidros em {CLIENT_CONFIG.city}. Todos os direitos reservados.
           </p>
           <div className="flex gap-8 opacity-20 grayscale hover:opacity-100 hover:grayscale-0 transition-all items-center">
